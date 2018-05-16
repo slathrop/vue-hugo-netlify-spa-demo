@@ -7,7 +7,7 @@
     "dev": "hugo serve",
     "build": "hugo -d ./dist",
     "build-full": "hugo -d ./dist --cleanDestinationDir",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-preview": "hugo -d ./dist --buildDrafts --buildFuture"
   },
   "keywords": [],
   "author": "slathrop",

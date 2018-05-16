@@ -1,0 +1,12 @@
+# Stop!
+#   Ordinarily you might want to put your Netlify build command and
+#   publish directory, etc. in this file. But this project contains
+#   multiple sites, which means that a 'netlify.toml' file won't
+#   work to accommodate all of the settings.
+#   Instead, use the Netlify website to configure your sites
+#   individually. For details on this approach, see:
+#
+#     https://github.com/netlify/netlify-cms/issues/1325
+#
+#   You *can* however place '_redirects' files in each site to
+#   configure redirects and proxying.
