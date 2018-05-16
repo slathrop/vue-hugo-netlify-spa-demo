@@ -9,7 +9,7 @@ The idea is to use Hugo to generate a read-only, git-backed REST API (inspiratio
 
 The API backend would, for purposes of this demo, be hit by a Vue.js, Nuxt, Axios, Vuetify SPA front-end.
 
-And the hope is to have all of the pieces in this one monorepo deploy via Netlify upon any push to master.
+And the hope is to have all of the pieces in this one monorepo deploy via Netlify upon any push to master (see related discussion [here](https://github.com/netlify/netlify-cms/issues/1325)).
 
 So to summarize:
 
