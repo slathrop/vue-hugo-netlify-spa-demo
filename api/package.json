@@ -1,0 +1,15 @@
+{
+  "name": "slathrop-hugo-api-demo",
+  "version": "0.0.1",
+  "description": "Hugo REST API Demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo serve",
+    "build": "hugo -d ./dist",
+    "build-full": "hugo -d ./dist --cleanDestinationDir",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "slathrop",
+  "license": "MIT"
+}

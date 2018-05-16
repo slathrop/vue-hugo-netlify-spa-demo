@@ -19,8 +19,27 @@ So to summarize:
 
 And given the JAMstack model and Netlify's hosting, this should all be massively scalable, globally distributed via CDN, extremely fast, virtually un-hackable, and totally free to run.
 
-## Progress
+## Getting Setup
 
-Here's a running list of the things I tried as I worked on this POC project.
+Here's a running list of the things that I did to kick-off this project after writing the initial README content above.
 
-...Coming Soon
+### Tooling
+
+- This project assumes that you have [installed a recent Node.js LTS](https://nodejs.org/en/download/) version
+- This project also assumes that you have [installed Hugo](https://gohugo.io/getting-started/installing) and that it is globally available to run from the command prompt
+- Optionally [install Yarn](https://yarnpkg.com/en/docs/install) if you wish to use it instead of NPM
+
+### API
+
+For the API piece:
+
+- From the root folder, run `hugo new site api`, which creates the `api` subfolder
+- In the `api` folder
+  - Cleanup a bit, removing Hugo stuff we won't need: `archetypes`, `themes`, etc.
+  - Tweak Hugo's `config.toml` to eliminate RSS and sitemap stuff
+  - Run `npm init -y` to create an initial `package.json` so we can use NPM Scripts to control how Hugo does things
+  - NPM Scripts configured to support commands:
+    - `npm run dev` or `yarn dev` to run a local Hugo development server with live reload
+    - `npm run build` or `yarn build` to do a quick, incremental build to `./dist`
+    - `npm run build-full` or `yarn build-full` to do a full build, cleaning the `./dist` folder
+
