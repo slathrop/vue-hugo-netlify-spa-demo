@@ -49,3 +49,5 @@ For the API piece:
   - Under "Create a new site" selected this repo
   - Configured `master` branch to deploy, set "Build command" to `cd api && npm run build` and "Publish directory" to `api/dist`
   - Clicked "Deploy site"
+  - Configured subdomain so that site is hosted under Netlify at: https://bobble-api.netlify.com/
+  
