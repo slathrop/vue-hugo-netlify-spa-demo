@@ -19,11 +19,13 @@ So to summarize:
 
 And given the JAMstack model and Netlify's hosting, this should all be massively scalable, globally distributed via CDN, extremely fast, virtually un-hackable, and totally free to run.
 
-## Getting Setup
+## How This Project Was Created
 
 Here's a running list of the things that I did to kick-off this project after writing the initial README content above.
 
 ### Tooling
+
+I already had the tools installed, but if you want to follow along here's what you need.
 
 - This project assumes that you have [installed a recent Node.js LTS](https://nodejs.org/en/download/) version
 - This project also assumes that you have [installed Hugo](https://gohugo.io/getting-started/installing) and that it is globally available to run from the command prompt
@@ -33,13 +35,17 @@ Here's a running list of the things that I did to kick-off this project after wr
 
 For the API piece:
 
-- From the root folder, run `hugo new site api`, which creates the `api` subfolder
+- From the root folder, I ran `hugo new site api`, which created the `api` subfolder
 - In the `api` folder
-  - Cleanup a bit, removing Hugo stuff we won't need: `archetypes`, `themes`, etc.
-  - Tweak Hugo's `config.toml` to eliminate RSS and sitemap stuff
-  - Run `npm init -y` to create an initial `package.json` so we can use NPM Scripts to control how Hugo does things
+  - Cleaned a bit, removing Hugo stuff we won't need: `archetypes`, `themes`, etc.
+  - Tweaked Hugo's `config.toml` to eliminate RSS and sitemap stuff
+  - Ran `npm init -y` to create an initial `package.json` so we can use NPM Scripts to control how Hugo does things
   - NPM Scripts configured to support commands:
     - `npm run dev` or `yarn dev` to run a local Hugo development server with live reload
     - `npm run build` or `yarn build` to do a quick, incremental build to `./dist`
     - `npm run build-full` or `yarn build-full` to do a full build, cleaning the `./dist` folder
-
+- Logged-in to [app.netlify.com](https://app.netlify.com) with my GitHub credentials and clicked "New site from Git"
+  - Under "Continuous Deployment" selected GitHub and then clicked "Authorize netlify"
+  - Under "Create a new site" selected this repo
+  - Configured `master` branch to deploy, set "Build command" to `cd api && npm run build` and "Publish directory" to `api/dist`
+  - Clicked "Deploy site"
