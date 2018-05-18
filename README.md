@@ -4,7 +4,7 @@ This repo contains a demo/POC project to see how well a monorepo using Vue, Hugo
 
 The idea is to use Hugo to generate a read-only, git-backed REST API (inspiration was found [here](https://forestry.io/blog/build-a-json-api-with-hugo/)) with data that can be updated via:
 
-1. A Netlify CMS front-end, or
+1. A Netlify CMS admin UI, or
 1. The GitHub API (which effectively makes the API read-write, with a bit of build latency)
 
 The API backend would, for purposes of this demo, be hit by a Vue.js, Nuxt, Axios, Vuetify SPA front-end.
@@ -19,7 +19,7 @@ So to summarize:
 
 And given the JAMstack model and Netlify's hosting, this should all be massively scalable, globally distributed via CDN, extremely fast, virtually un-hackable, and totally free to run.
 
-## How This Project Was Created
+## How This Project Was Initially Created
 
 Here's a running list of the things that I did to kick-off this project after writing the initial README content above.
 
@@ -27,9 +27,10 @@ Here's a running list of the things that I did to kick-off this project after wr
 
 I already had the tools installed, but if you want to follow along here's what you need.
 
-- This project assumes that you have [installed a recent Node.js LTS](https://nodejs.org/en/download/) version
-- This project also assumes that you have [installed Hugo](https://gohugo.io/getting-started/installing) and that it is globally available to run from the command prompt
-- Optionally [install Yarn](https://yarnpkg.com/en/docs/install) if you wish to use it instead of NPM
+- This project assumes that you have [installed a recent **Node.js** LTS](https://nodejs.org/en/download/) version
+- This project also assumes that you have [installed **Hugo**](https://gohugo.io/getting-started/installing) and that it is globally available to run from the command prompt
+- Optionally [install **Yarn**](https://yarnpkg.com/en/docs/install) if you wish to use it instead of NPM
+- I use Visual Studio Code ([**VSCode**](https://code.visualstudio.com/download))
 
 ### API
 
@@ -50,4 +51,18 @@ For the API piece:
   - Configured `master` branch to deploy, set "Build command" to `cd api && npm run build` and "Publish directory" to `api/dist`
   - Clicked "Deploy site"
   - Configured subdomain so that site is hosted under Netlify at: https://bobble-api.netlify.com/
-  
+
+### App
+
+For the frontend App:
+
+- Vue.js
+- TODO
+
+### Admin
+
+For the admin UI:
+
+- Netlify CMS
+- TODO
+
