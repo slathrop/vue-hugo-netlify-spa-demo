@@ -2,3 +2,8 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Hugo REST API Demo"
 disableKinds = ["RSS", "sitemap"]
+
+[outputs]
+  page = ["json"] # A player
+  section = ["json"] # All players
+  home = ["html"]
