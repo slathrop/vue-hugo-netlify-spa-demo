@@ -51,13 +51,30 @@ For the API piece:
   - Configured `master` branch to deploy, set "Build command" to `cd api && npm run build` and "Publish directory" to `api/dist`
   - Clicked "Deploy site"
   - Configured subdomain so that site is hosted under Netlify at: https://bobble-api.netlify.com/
+  - Please see NOTE in `netlify.toml` config file RE: setup as it is unique to this monorepo approach
 
 ### App
 
-For the frontend App:
+For the frontend App I used [**create-nuxt-app**](https://github.com/nuxt-community/create-nuxt-app)
 
-- Vue.js
-- TODO
+- From this project's root folder, I ran `yarn create nuxt-app app` and entered/selected the following options
+  - Project name: `slathrop-vue-hugo-spa-app`
+  - Project description: Demo Vue Hugo SPA App
+  - Use a custom server framework: none
+  - Use a custom UI framework: vuetify
+  - Choose rendering mode: Single Page App
+  - Use axios module: yes
+  - Use eslint: yes
+  - Choose a package manager: npm
+- `create-nuxt-app` initializes git in the `app` folder created. We don't need separate git tracking for this subfolder, so
+  - Changed directory into `app`: `cd app`
+  - Removed `.git` folder: `rd /s /q .git` (on Windows)
+- `create-nuxt-app` has some outdated dependencies listed in the generated `package.json`, so updated to
+  - `"nuxt": "^1.4.0"`
+  - `"vuetify": "^1.0.18"`
+  - `"@nuxtjs/axios": "^5.3.1"`
+- Ran `yarn install`
+- Changed the default app component style from `dark` to `light` in `app\layouts\default.vue` and the default progress bar color in `app\nuxt.config.js`
 
 ### Admin
 
@@ -66,3 +83,6 @@ For the admin UI:
 - Netlify CMS
 - TODO
 
+## Implementation
+
+TODO
