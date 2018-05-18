@@ -24,6 +24,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "stylus-loader": "^3.0.1",
+    "nuxt": "^1.4.0"
   }
 }
