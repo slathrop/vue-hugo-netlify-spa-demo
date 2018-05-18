@@ -34,7 +34,9 @@ I already had the tools installed, but if you want to follow along here's what y
 
 ### API
 
-For the API piece:
+For the API piece it's about getting Hugo setup for serving primarily JSON instead of HTML.
+
+<details><summary>Details</summary>
 
 - From the root folder, I ran `hugo new site api`, which created the `api` subfolder
 - In the `api` folder
@@ -53,9 +55,13 @@ For the API piece:
   - Configured subdomain so that site is hosted under Netlify at: https://bobble-api.netlify.com/
   - Please see NOTE in `netlify.toml` config file RE: setup as it is unique to this monorepo approach
 
+</details>
+
 ### App
 
-For the frontend App I used [**create-nuxt-app**](https://github.com/nuxt-community/create-nuxt-app)
+For the frontend App I used [**create-nuxt-app**](https://github.com/nuxt-community/create-nuxt-app).
+
+<details><summary>Details</summary>
 
 - From this project's root folder, I ran `yarn create nuxt-app app` and entered/selected the following options
   - Project name: `slathrop-vue-hugo-spa-app`
@@ -81,6 +87,8 @@ For the frontend App I used [**create-nuxt-app**](https://github.com/nuxt-commun
   - Configured `master` branch to deploy, set "Build command" to `cd app && npm install && npm run generate` and "Publish directory" to `app/dist`
   - Clicked "Deploy site"
   - Configured subdomain so that site is hosted under Netlify at: https://bobble-app.netlify.com/
+
+</details>
 
 ### Admin
 
