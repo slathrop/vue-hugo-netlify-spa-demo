@@ -67,14 +67,20 @@ For the frontend App I used [**create-nuxt-app**](https://github.com/nuxt-commun
   - Use eslint: yes
   - Choose a package manager: npm
 - `create-nuxt-app` initializes git in the `app` folder created. We don't need separate git tracking for this subfolder, so
-  - Changed directory into `app`: `cd app`
+  - Changed directory into *app*: `cd app`
   - Removed `.git` folder: `rd /s /q .git` (on Windows)
 - `create-nuxt-app` has some outdated dependencies listed in the generated `package.json`, so updated to
   - `"nuxt": "^1.4.0"`
   - `"vuetify": "^1.0.18"`
   - `"@nuxtjs/axios": "^5.3.1"`
-- Ran `yarn install`
+- Ran `npm install`
 - Changed the default app component style from `dark` to `light` in `app\layouts\default.vue` and the default progress bar color in `app\nuxt.config.js`
+- Logged-in to [app.netlify.com](https://app.netlify.com) with my GitHub credentials and clicked "New site from Git"
+  - Under "Continuous Deployment" selected GitHub and then clicked "Authorize netlify"
+  - Under "Create a new site" selected this repo
+  - Configured `master` branch to deploy, set "Build command" to `cd app && npm install && npm run generate` and "Publish directory" to `app/dist`
+  - Clicked "Deploy site"
+  - Configured subdomain so that site is hosted under Netlify at: https://bobble-app.netlify.com/
 
 ### Admin
 
