@@ -1,0 +1,42 @@
+[[Player]]
+Key = 'Turner_Trea_2017_SGA'
+FirstName = 'Trea'
+LastName = 'Turner'
+Category = ['SGA', '2017']
+Team = 'Nationals'
+Pose = 'Sliding'
+Photo = '/asset/trea-turner-sga-2017.jpg'
+
+[[Player]]
+Key = 'Turner_Trea_MLB_Baller'
+FirstName = 'Trea'
+LastName = 'Turner'
+Category = ['Licensed', 'Retail']
+Team = 'Nationals'
+Pose = 'Hitting'
+Photo = '/asset/trea-turner-mlb-retail.jpg'
+
+[[Player]]
+Key = 'Colon_Bartolo_2017_SGA'
+FirstName = 'Bartolo'
+LastName = 'Colon'
+Type = ['SGA', '2017']
+Team = 'Braves'
+Pose = 'Pitching'
+Photo = '/asset/bartolo-colon-2017.jpg'
+
+[[Coach]]
+Key = 'Baker_Dusty_2016_SGA'
+FirstName = 'Dusty'
+LastName = 'Baker'
+Type = ['SGA']
+Pose = 'Standing'
+Photo = '/asset/dustybobble2016.jpg'
+
+# [[Player/Coach]]
+# Key = ''
+# FirstName = ''
+# LastName = ''
+# Type = ['']
+# Pose = ''
+# Photo = '/asset/image.jpg'
