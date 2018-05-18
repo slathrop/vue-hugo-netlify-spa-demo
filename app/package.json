@@ -1,6 +1,6 @@
 {
   "name": "slathrop-vue-hugo-spa-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Demo Vue Hugo SPA App",
   "author": "SLathrop",
   "private": true,
@@ -24,7 +24,6 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "nuxt": "^1.4.0"
+    "stylus-loader": "^3.0.1"
   }
 }
