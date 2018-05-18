@@ -15,4 +15,5 @@
 
 [build.environment]
 NODE_VERSION = '8.9.1'
+NODE_ENV = 'production'
 HUGO_VERSION = '0.40.3'
