@@ -1,3 +1,3 @@
-# Rewrite API paths from cleaner folders name to underlying .json files 
+# Rewrite API paths from cleaner folder names to underlying get.json files 
 /coaches/all          /coaches/all/get.json         200
 /coaches/top          /coaches/top/get.json         200
