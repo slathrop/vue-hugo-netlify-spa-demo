@@ -1,4 +1,4 @@
----
-outputs: ["JSON"]
----
++++
+outputs = ['JSON']
++++
 {{< coaches >}}
