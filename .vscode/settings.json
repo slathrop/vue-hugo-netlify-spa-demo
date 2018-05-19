@@ -1,5 +1,5 @@
 {
-  "files.insertFinalNewline": false,
+  "files.insertFinalNewline": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
