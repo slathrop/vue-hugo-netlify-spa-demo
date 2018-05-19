@@ -1,0 +1,4 @@
+---
+outputs: ["JSON"]
+---
+{{< coaches >}}

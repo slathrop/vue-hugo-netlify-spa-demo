@@ -3,7 +3,16 @@ languageCode = "en-us"
 title = "Hugo REST API Demo"
 disableKinds = ["RSS", "sitemap"]
 
-[outputs]
-  page = ["json"] # A player
-  section = ["json"] # All players
-  home = ["html"]
+[outputFormats.JSON]
+baseName = "get"
+isPlainText = true
+isHTML = false
+noUgly = false
+
+  [outputFormats.JSON.mediaType]
+  delimiter = "."
+  type = "application/json"
+  string = "application/json+json"
+  mainType = "application"
+  subType = "json"
+  suffix = "json"
