@@ -5,14 +5,14 @@
     subcat (optional)     Subcategory of players to render, if any, based on the specified string value
                           being present in the "Category" array (case-sensitive)
 -->
-{{- $coaches := where .Site.Data.MLB.Bobble "Category" "intersect" (slice "Coach") -}}
-{{- $render := "coaches_render" -}}
-{{- $.Scratch.Set $render $coaches -}}
+{{- $players := where .Site.Data.MLB.Bobble "Category" "intersect" (slice "Player") -}}
+{{- $render := "players_render" -}}
+{{- $.Scratch.Set $render $players -}}
 
 {{- with .Get "subcat" -}}
-  {{- $.Scratch.Set $render (where $coaches "Category" "intersect" (slice .)) -}}
+  {{- $.Scratch.Set $render (where $players "Category" "intersect" (slice .)) -}}
 {{- end -}}
 
   {
-    "coachBobbles": {{- $.Scratch.Get $render | jsonify }}
+    "playerBobbles": {{- $.Scratch.Get $render | jsonify }}
   }

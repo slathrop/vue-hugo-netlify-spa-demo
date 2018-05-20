@@ -1,3 +1,14 @@
-# Rewrite API paths from cleaner folder names to underlying get.json files 
-/coaches/all          /coaches/all/get.json         200
-/coaches/top          /coaches/top/get.json         200
+# Rewrite API paths from cleaner folder names to underlying "get.json" files
+# TODO: Consider using Hugo's .Site.Pages and templates to render this automatically!
+
+/coaches/all              /coaches/all/get.json             200
+/coaches/all/             /coaches/all/get.json             200
+
+/coaches/retired          /coaches/retired/get.json         200
+/coaches/retired/         /coaches/retired/get.json         200
+
+/players/all              /coaches/all/get.json             200
+/players/all/             /coaches/all/get.json             200
+
+/players/retail           /coaches/retail/get.json          200
+/players/retail/          /coaches/retail/get.json          200
