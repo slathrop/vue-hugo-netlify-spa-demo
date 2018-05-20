@@ -1,42 +1,50 @@
-[[Player]]
+[[Bobble]]
 Key = 'Turner_Trea_2017_SGA'
 FirstName = 'Trea'
 LastName = 'Turner'
-Category = ['SGA', '2017']
+Category = ['Player', 'SGA', '2017']
 Team = 'Nationals'
 Pose = 'Sliding'
 Photo = '/asset/trea-turner-sga-2017.jpg'
 
-[[Player]]
+[[Bobble]]
 Key = 'Turner_Trea_MLB_Baller'
 FirstName = 'Trea'
 LastName = 'Turner'
-Category = ['Licensed', 'Retail']
+Category = ['Player', 'Licensed', 'Retail']
 Team = 'Nationals'
 Pose = 'Hitting'
 Photo = '/asset/trea-turner-mlb-retail.jpg'
 
-[[Player]]
+[[Bobble]]
 Key = 'Colon_Bartolo_2017_SGA'
 FirstName = 'Bartolo'
 LastName = 'Colon'
-Type = ['SGA', '2017']
+Category = ['Player', 'SGA', '2017']
 Team = 'Braves'
 Pose = 'Pitching'
 Photo = '/asset/bartolo-colon-2017.jpg'
 
-[[Coach]]
+[[Bobble]]
 Key = 'Baker_Dusty_2016_SGA'
 FirstName = 'Dusty'
 LastName = 'Baker'
-Type = ['SGA']
+Category = ['Coach', 'SGA']
 Pose = 'Standing'
 Photo = '/asset/dustybobble2016.jpg'
 
-# [[Player/Coach]]
+[[Bobble]]
+Key = 'Johnson_Davey_2013_SGA'
+FirstName = 'Davy'
+LastName = 'Johnson'
+Category = ['Coach', 'SGA', 'Retired']
+Pose = 'Standing'
+Photo = '/asset/johnsonbobble2013.jpg'
+
+# [[Bobble]]
 # Key = ''
 # FirstName = ''
 # LastName = ''
-# Type = ['']
+# Category = ['Player/Coach', 'etc']
 # Pose = ''
 # Photo = '/asset/image.jpg'

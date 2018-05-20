@@ -2,5 +2,5 @@
 outputs = ['JSON']
 +++
 {{< json-data >}}
-  {{< coaches >}}
+  {{< coaches subcat="Retired" >}}
 {{< /json-data >}}

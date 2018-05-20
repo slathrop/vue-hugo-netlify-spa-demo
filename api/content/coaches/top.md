@@ -1,4 +1,0 @@
-+++
-outputs = ['JSON']
-+++
-{{< coaches >}}

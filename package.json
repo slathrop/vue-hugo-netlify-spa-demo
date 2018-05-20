@@ -4,7 +4,7 @@
   "description": "This repo contains a demo/POC project to see how well a monorepo using Vue, Hugo, and Netlify will work.",
   "main": "index.js",
   "scripts": {
-    "api-dev": "hugo serve -s ./api",
+    "api-dev": "hugo serve -s ./api --disableFastRender",
     "api-build": "hugo -s ./api -d ./dist",
     "api-build-full": "hugo -s ./api -d ./dist --cleanDestinationDir",
     "api-build-preview": "hugo -s ./api -d ./dist --buildDrafts --buildFuture"
