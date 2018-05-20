@@ -20,9 +20,9 @@
       <!-- <v-btn icon @click.stop="clippedLeftDrawer = !clippedLeftDrawer">
         <v-icon>web</v-icon>
       </v-btn> -->
-      <v-btn icon @click.stop="fixed = !fixed">
+      <!-- <v-btn icon @click.stop="fixedFooter = !fixedFooter">
         <v-icon>remove</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <!-- <v-spacer></v-spacer>
       <v-btn icon @click.stop="">
@@ -34,7 +34,7 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer :fixed="fixed" app>
+    <v-footer :fixed="fixedFooter" app>
       <span>&copy; 2017</span>
     </v-footer>
   </v-app>
@@ -46,7 +46,7 @@ export default {
     return {
       clippedLeftDrawer: true,
       drawer: true,
-      fixed: false,
+      fixedFooter: true,
       items: [
         { icon: "apps", title: "Welcome", to: "/" },
         { icon: "bubble_chart", title: "Inspire", to: "/inspire" }
