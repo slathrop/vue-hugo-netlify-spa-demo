@@ -24,8 +24,9 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer :fixed="fixedFooter" app>
-      <span>&copy; 2017</span>
+    <v-footer :fixed="fixedFooter" app class="pa-3">
+      <v-spacer></v-spacer>
+      <div>&copy; 2018</div>
     </v-footer>
   </v-app>
 </template>
