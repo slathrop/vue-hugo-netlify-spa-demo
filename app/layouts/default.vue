@@ -1,6 +1,6 @@
 <template>
   <v-app light>
-    <v-navigation-drawer :mini-variant="miniVariant" :clipped="clippedLeftDrawer" v-model="drawer" fixed app>
+    <v-navigation-drawer :mini-variant="miniVariant" :clipped="clippedLeftDrawer" v-model="drawer" fixed app width="200">
       <v-list>
         <v-list-tile router :to="item.to" :key="i" v-for="(item, i) in items" exact>
           <v-list-tile-action>
@@ -39,8 +39,9 @@ export default {
       drawer: true,
       fixedFooter: true,
       items: [
-        { icon: "apps", title: "Welcome", to: "/" },
-        { icon: "bubble_chart", title: "Inspire", to: "/inspire" }
+        { icon: "home", title: "Welcome", to: "/" },
+        { icon: "people", title: "Players", to: "/players" },
+        { icon: "assignment", title: "Coaches", to: "/coaches" }
       ],
       miniVariant: false,
       title: "MLB Bobble Heads"
