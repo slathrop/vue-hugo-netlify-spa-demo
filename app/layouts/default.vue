@@ -1,6 +1,6 @@
 <template>
   <v-app light>
-    <v-navigation-drawer :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" fixed app>
+    <v-navigation-drawer :mini-variant="miniVariant" :clipped="clippedLeftDrawer" v-model="drawer" fixed app>
       <v-list>
         <v-list-tile router :to="item.to" :key="i" v-for="(item, i) in items" exact>
           <v-list-tile-action>
@@ -12,14 +12,14 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
+    <v-toolbar fixed app :clipped-left="clippedLeftDrawer">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
+      <!-- <v-btn icon @click.stop="clippedLeftDrawer = !clippedLeftDrawer">
         <v-icon>web</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-btn icon @click.stop="fixed = !fixed">
         <v-icon>remove</v-icon>
       </v-btn>
@@ -44,7 +44,7 @@
 export default {
   data() {
     return {
-      clipped: false,
+      clippedLeftDrawer: true,
       drawer: true,
       fixed: false,
       items: [
@@ -52,7 +52,7 @@ export default {
         { icon: "bubble_chart", title: "Inspire", to: "/inspire" }
       ],
       miniVariant: false,
-      title: "Vuetify.js"
+      title: "MLB Bobble Heads"
     };
   }
 };
