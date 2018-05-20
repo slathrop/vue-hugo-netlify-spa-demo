@@ -1,0 +1,55 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "all:dev",
+      "dependsOn": [
+        "api:dev",
+        "app:dev"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "api:dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "api/",
+        "shell": {
+          "executable": "cmd.exe",
+          "args": [
+            "/K"
+          ]
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "app:dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "app/",
+        "shell": {
+          "executable": "cmd.exe",
+          "args": [
+            "/K"
+          ]
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
