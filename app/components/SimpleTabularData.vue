@@ -11,8 +11,8 @@
 </template>
 
 <script>
-// const API_HOST = 'https://bobble-api.netlify.com';
-const API_HOST = 'http://localhost:1313';
+const API_HOST = 'https://bobble-api.netlify.com';
+// const API_HOST = 'http://localhost:1313';
 const API_GET_SUFFIX = '/get.json';
 
 export default {
