@@ -6,15 +6,12 @@
       <td>{{ props.item.FirstName }}</td>
       <td>{{ props.item.Team }}</td>
       <td>{{ props.item.Pose }}</td>
+      <td><img class="bobble-photo" :src="`${API_HOST}/${props.item.Photo}`"></td>
     </template>
   </v-data-table>
 </template>
 
 <script>
-const API_HOST = 'https://bobble-api.netlify.com';
-// const API_HOST = 'http://localhost:1313';
-const API_GET_SUFFIX = '/get.json';
-
 export default {
   props: {
     entityBaseUrl: {
@@ -28,6 +25,10 @@ export default {
   },
 
   data: () => ({
+    API_HOST: 'https://bobble-api.netlify.com',
+    // API_HOST: 'http://localhost:1313',
+    API_GET_SUFFIX: '/get.json',
+
     loading: true,
     pagination: {
       sortBy: 'LastName'
@@ -38,7 +39,8 @@ export default {
       { text: 'Last Name', value: 'LastName', align: 'left' },
       { text: 'First Name', value: 'FirstName', align: 'left' },
       { text: 'Team', value: 'Team', align: 'left' },
-      { text: 'Bobble Pose', value: 'Pose', align: 'left' }
+      { text: 'Bobble Pose', value: 'Pose', align: 'left' },
+      { text: 'Thumbnail', value: 'Photo', align: 'left' }
     ],
     rows: []
   }),
@@ -54,7 +56,7 @@ export default {
 
   computed: {
     dataUrl() {
-      return `${API_HOST}${this.entityBaseUrl}/all${API_GET_SUFFIX}`;
+      return `${this.API_HOST}${this.entityBaseUrl}/all${this.API_GET_SUFFIX}`;
     }
   },
 
@@ -78,4 +80,8 @@ export default {
 </script>
 
 <style scoped>
+.bobble-photo {
+  width: 100px;
+  margin: 5px;
+}
 </style>

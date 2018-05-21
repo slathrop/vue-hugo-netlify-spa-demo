@@ -8,6 +8,7 @@
 
 <script>
 import SimpleTabularData from '~/components/SimpleTabularData.vue';
+
 export default {
   components: {
     SimpleTabularData
