@@ -9,7 +9,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'MLB Bobbleheads', // pkg.name,
     meta: [{
         charset: 'utf-8'
       },
