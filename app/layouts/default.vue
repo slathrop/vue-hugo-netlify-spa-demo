@@ -56,7 +56,7 @@ export default {
         }
       ],
       miniVariant: false,
-      title: 'MLB Bobble Heads'
+      title: 'MLB Bobbleheads'
     };
   }
 };
