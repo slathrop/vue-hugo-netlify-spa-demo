@@ -26,10 +26,20 @@ Pose = 'Pitching'
 Photo = '/asset/bartolo-colon-2017.jpg'
 
 [[Bobble]]
+Key = 'Dickey_RA_2014_SGA'
+FirstName = 'R.A.'
+LastName = 'Dickey'
+Category = ['Player', 'SGA', '2014']
+Team = 'Blue Jays'
+Pose = 'Pitching'
+Photo = '/asset/ra-dickey-2014.jpg'
+
+[[Bobble]]
 Key = 'Baker_Dusty_2016_SGA'
 FirstName = 'Dusty'
 LastName = 'Baker'
 Category = ['Coach', 'SGA']
+Team = 'Nationals'
 Pose = 'Standing'
 Photo = '/asset/dustybobble2016.jpg'
 
@@ -38,6 +48,7 @@ Key = 'Johnson_Davey_2013_SGA'
 FirstName = 'Davy'
 LastName = 'Johnson'
 Category = ['Coach', 'SGA', 'Retired']
+Team = 'Nationals'
 Pose = 'Standing'
 Photo = '/asset/johnsonbobble2013.jpg'
 
@@ -45,6 +56,7 @@ Photo = '/asset/johnsonbobble2013.jpg'
 # Key = ''
 # FirstName = ''
 # LastName = ''
-# Category = ['Player/Coach', 'etc']
+# Category = ['Player/Coach', 'etc'],
+# Team = ''
 # Pose = ''
 # Photo = '/asset/image.jpg'

@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <v-flex>
-      <simple-tabular-data entity-base-url="/players" entity-result-data-key="playerBobbles" />
+      <simple-tabular-data entity-base-url="/coaches" entity-result-data-key="coachBobbles" />
     </v-flex>
   </v-layout>
 </template>
@@ -16,11 +16,11 @@ export default {
   data: () => ({}),
 
   created() {
-    console.log('Created players page');
+    console.log('Created coaches page');
   },
 
   mounted() {
-    console.log('Mounted players page');
+    console.log('Mounted coaches page');
   }
 };
 </script>
