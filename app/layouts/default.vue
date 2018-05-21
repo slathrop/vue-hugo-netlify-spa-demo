@@ -61,3 +61,10 @@ export default {
   }
 };
 </script>
+
+<style>
+/* Avoid vertical scrollbar when possible */
+html {
+  overflow-y: auto !important;
+}
+</style>
