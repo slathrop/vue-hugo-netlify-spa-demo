@@ -7,8 +7,8 @@
 /coaches/retired          /coaches/retired/get.json         200
 /coaches/retired/         /coaches/retired/get.json         200
 
-/players/all              /coaches/all/get.json             200
-/players/all/             /coaches/all/get.json             200
+/players/all              /players/all/get.json             200
+/players/all/             /players/all/get.json             200
 
-/players/retail           /coaches/retail/get.json          200
-/players/retail/          /coaches/retail/get.json          200
+/players/retail           /players/retail/get.json          200
+/players/retail/          /players/retail/get.json          200
