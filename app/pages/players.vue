@@ -16,7 +16,9 @@
 
 <script>
 const API_HOST = 'https://bobble-api.netlify.com';
-const API_BASE_URL = '/players';
+// const API_HOST = 'http://localhost:1313';
+const API_ENTITY_BASE_URL = '/players';
+const API_GET_SUFFIX = '/get.json';
 
 export default {
   data: () => ({
@@ -34,7 +36,7 @@ export default {
     ],
     players: [],
 
-    dataBaseUrl: `${API_HOST}${API_BASE_URL}/all`
+    dataUrl: `${API_HOST}${API_ENTITY_BASE_URL}/all${API_GET_SUFFIX}`
   }),
 
   created() {
@@ -43,6 +45,7 @@ export default {
 
   mounted() {
     console.log('Mounted App');
+    this.getRows();
   },
 
   methods: {
@@ -50,9 +53,8 @@ export default {
       this.loading = true;
 
       try {
-        const dataUrl = `${this.dataBaseUrl}`;
         console.log('Getting players...');
-        const response = await this.$axios.$get(dataUrl);
+        const response = await this.$axios.$get(this.dataUrl);
         console.log('Got players');
         this.players = response.data.playerBobbles;
       } catch (e) {
