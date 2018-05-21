@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <v-flex text-xs-center>
-      <v-data-table :loading="false" :must-sort="true" :headers="[]" :items="[]" :total-items="0" rows-per-page-text="Rows:" :rows-per-page-items="rowsOptions">
+      <v-data-table :must-sort="true" :headers="headers" :items="players" hide-actions>
         <template slot="items" slot-scope="propsSU">
           <td>
             <v-menu bottom left>
@@ -21,36 +21,43 @@
 </template>
 
 <script>
-const API_HOST = "https://bobble-api.netlify.com";
-const API_BASE_URL = "/v1";
+const API_HOST = 'https://bobble-api.netlify.com';
+const API_BASE_URL = '/v1';
 
 export default {
   data: () => ({
     loading: true,
     pagination: {
-      sortBy: "LName",
-      rowsPerPage: 10
+      sortBy: 'LName'
     },
     mustSort: true,
     headers: [
-      { text: "", value: "", sortable: false, align: "left" },
-      { text: "Last Name", value: "LName", align: "left" },
-      { text: "First Name", value: "FName", align: "left" },
-      { text: "Team", value: "Team", align: "left" },
-      { text: "Bobble Pose", value: "Pose", align: "left" }
+      { text: '', value: 'RowLabel', sortable: false, align: 'left' },
+      { text: 'Last Name', value: 'LName', align: 'left' },
+      { text: 'First Name', value: 'FName', align: 'left' },
+      { text: 'Team', value: 'Team', align: 'left' },
+      { text: 'Bobble Pose', value: 'Pose', align: 'left' }
     ],
-    rowsOptions: [5, 10, 25, 100, 500],
+    players: [
+      {
+        RowLabel: 'Row',
+        LName: 'Smith',
+        FName: 'John',
+        Team: 'Nats',
+        Pose: 'Batting'
+      }
+    ],
 
     dataBaseUrl: `${API_HOST}${API_BASE_URL}/Players`,
     countBaseUrl: `${API_HOST}${API_BASE_URL}/Players/count`
   }),
 
   created() {
-    console.log("Created App");
+    console.log('Created App');
   },
 
   mounted() {
-    console.log("Mounted App");
+    console.log('Mounted App');
   }
 };
 </script>
