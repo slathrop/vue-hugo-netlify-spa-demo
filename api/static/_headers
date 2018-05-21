@@ -1,0 +1,4 @@
+# API site allows CORS requests
+
+/*
+  Access-Control-Allow-Origin: *

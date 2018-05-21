@@ -13,16 +13,17 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "ajv": "^6.5.0",
     "nuxt": "^1.4.0",
-    "vuetify": "^1.0.18",
-    "@nuxtjs/axios": "^5.3.1"
+    "vuetify": "^1.0.18"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.15.0",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint-plugin-vue": "^4.5.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }
