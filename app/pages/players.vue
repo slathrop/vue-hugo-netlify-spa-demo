@@ -4,8 +4,8 @@
       <v-data-table :must-sort="true" :headers="headers" :items="rows" hide-actions>
         <template slot="items" slot-scope="props">
           <td>{{ props.item.RowLabel }}</td>
-          <td>{{ props.item.LName }}</td>
-          <td>{{ props.item.FName }}</td>
+          <td>{{ props.item.LastName }}</td>
+          <td>{{ props.item.FirstName }}</td>
           <td>{{ props.item.Team }}</td>
           <td>{{ props.item.Pose }}</td>
         </template>
