@@ -1,19 +1,13 @@
 <template>
   <v-layout>
-    <v-flex text-xs-center>
+    <v-flex>
       <v-data-table :must-sort="true" :headers="headers" :items="players" hide-actions>
-        <template slot="items" slot-scope="propsSU">
-          <td>
-            <v-menu bottom left>
-              <v-btn icon slot="activator">
-                <v-icon>more_vert</v-icon>
-              </v-btn>
-            </v-menu>
-          </td>
-          <td>Coming</td>
-          <td>Soon</td>
-          <td>Player</td>
-          <td>Data</td>
+        <template slot="items" slot-scope="props">
+          <td>{{ props.item.RowLabel }}</td>
+          <td>{{ props.item.LName }}</td>
+          <td>{{ props.item.FName }}</td>
+          <td>{{ props.item.Team }}</td>
+          <td>{{ props.item.Pose }}</td>
         </template>
       </v-data-table>
     </v-flex>
@@ -22,7 +16,7 @@
 
 <script>
 const API_HOST = 'https://bobble-api.netlify.com';
-const API_BASE_URL = '/v1';
+const API_BASE_URL = '/players';
 
 export default {
   data: () => ({
@@ -38,18 +32,9 @@ export default {
       { text: 'Team', value: 'Team', align: 'left' },
       { text: 'Bobble Pose', value: 'Pose', align: 'left' }
     ],
-    players: [
-      {
-        RowLabel: 'Row',
-        LName: 'Smith',
-        FName: 'John',
-        Team: 'Nats',
-        Pose: 'Batting'
-      }
-    ],
+    players: [],
 
-    dataBaseUrl: `${API_HOST}${API_BASE_URL}/Players`,
-    countBaseUrl: `${API_HOST}${API_BASE_URL}/Players/count`
+    dataBaseUrl: `${API_HOST}${API_BASE_URL}/all`
   }),
 
   created() {
@@ -58,6 +43,24 @@ export default {
 
   mounted() {
     console.log('Mounted App');
+  },
+
+  methods: {
+    async getRows() {
+      this.loading = true;
+
+      try {
+        const dataUrl = `${this.dataBaseUrl}`;
+        console.log('Getting players...');
+        const response = await this.$axios.$get(dataUrl);
+        console.log('Got players');
+        this.players = response.data.playerBobbles;
+      } catch (e) {
+        console.log('Error getting players:', e);
+      }
+
+      this.loading = false;
+    }
   }
 };
 </script>
