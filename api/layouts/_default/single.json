@@ -1,6 +1,0 @@
-{{/*
-      For every individual (aka "single") markdown page, we simply render whatever
-      content is specified in the body. In this case, the expectation is that the body
-      is using Hugo shortcodes and templating to build a JSON response.
-*/}}
-{{- .Content -}}

@@ -3,16 +3,28 @@ languageCode = "en-us"
 title = "Hugo REST API Demo"
 disableKinds = ["RSS", "sitemap"]
 
+[server]
+[[server.headers]]
+  for = "/**.json"
+  [server.headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/json"
+    Cache-Control = "max-age=2628000, public, max-age=1296000"
+    Connection = "Keep-Alive"
+    Keep-Alive = "timeout=5, max=99"
+
+[outputs]
+    page = ["json"] # A player
+    section = ["json"] # All players
+    home = ["json"] # Everything
+
 [outputFormats.JSON]
-baseName = "get"
 isPlainText = true
 isHTML = false
 noUgly = false
-
-  [outputFormats.JSON.mediaType]
-  delimiter = "."
-  type = "application/json"
-  string = "application/json+json"
-  mainType = "application"
-  subType = "json"
-  suffix = "json"
+mediaType = "application/json"
+delimiter = "."
+type = "application/json"
+string = "application/json+json"
+subType = "json"
+    
