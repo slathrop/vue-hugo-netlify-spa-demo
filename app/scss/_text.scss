@@ -1,0 +1,40 @@
+@use "sass:meta";
+
+$alignList: center, left, right;
+
+@mixin align($align...) {
+    @each $name in $align {
+        .text-#{$name}{
+            text-align: $name;
+        }
+    }
+}
+
+@include align($alignList...);
+
+
+$transformList: uppercase, lowercase, capitalize;
+
+@mixin transform($transform...) {
+    @each $name in $transform {
+        .text-#{$name}{
+            text-transform: $name;
+        }
+    }
+}
+
+@include transform($transformList...);
+
+
+
+$weightList: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@mixin weight($weight...) {
+    @each $name in $weight {
+        .font-#{$name}{
+            font-weight: $name;
+        }
+    }
+}
+
+@include weight($weightList...);

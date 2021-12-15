@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/slathrop/vue-hugo-netlify-spa-demo/issues"
   },
-  "homepage": "https://github.com/slathrop/vue-hugo-netlify-spa-demo#readme"
+  "homepage": "https://github.com/slathrop/vue-hugo-netlify-spa-demo#readme",
+  "dependencies": {
+    "@luaguillande/scss_helpers": "^1.5.5"
+  }
 }

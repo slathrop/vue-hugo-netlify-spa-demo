@@ -1,32 +1,33 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <a v-for="(blog, i) in blogs.items" :key="i"> {{ blog }} </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+	<div
+		class="black fill-width banner d-flex align-center spl-24"
+		style="top: 0; height: 100vh"
+	>
+		<div class="spl-20">
+			<div
+				class="white--text titulo-banner font-100 mt-10 sml-24 spl-24"
+				style="text-shadow: 0 0 10px black"
+			>
+				<span class="font-200">APRENDIZAGEM</span> <br />
+				<b class="font-800">EVOLUTIVA</b>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-export default {
-  async asyncData({ $http }) {
-    const blogs = JSON.parse(await $http.$get('/blog/index.json'))
+	// export default {
+	//   async asyncData({ $http }) {
+	//     const blogs = JSON.parse(await $http.$get('/blog/index.json'))
 
-    return { blogs }
-  },
-}
+	//     return { blogs }
+	//   },
+	// }
 </script>
+
+<style lang="scss">
+	.banner {
+		background: linear-gradient(#000000c2, #000000e0),
+			url('/banner-bg.jpg') center/cover;
+	}
+</style>

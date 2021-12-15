@@ -1,0 +1,46 @@
+@import './all.scss';
+// @import '~/node_modules/_scroll';
+@import './_color_set.scss';
+
+
+$scroll-color: $c-primary;
+
+@import "./_scroll";
+
+@include colors(
+    $c-primary:  $c-primary,
+    $c-secondary: $c-secondary,
+    $c-error: $c-error,
+    // ...
+);
+
+.flex-0{
+    flex: 0 !important;
+}
+
+.no-radius{
+    border-radius: 0px !important
+}
+
+.absolute{
+    position: absolute;
+}
+
+.v-application{
+        font-family: "Source Sans 3", sans-serif !important;
+    }
+    
+    
+.titulo-banner {
+    font-size: calc(60px + 0.6vw);
+    line-height: 1.2;
+}
+
+
+.titulo {
+    font-size: calc(25px + 0.3vw);
+}
+
+.subtitulo {
+    font-size: calc(20px + 0.25vw);
+}

@@ -1,0 +1,23 @@
+$color: #969696 !default;
+
+/* SCROLL*/
+::-webkit-scrollbar-track {
+    background: #e6e6e6 !important;
+    position: fixed;
+    border: none !important;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    position: fixed;
+    border: none !important;
+}
+::-webkit-scrollbar-thumb:hover {
+    width: 7px;
+    background: $color !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lighten($color, 15%) !important;
+    border-radius: 50px !important;
+    transition: all 0.6s;
+}

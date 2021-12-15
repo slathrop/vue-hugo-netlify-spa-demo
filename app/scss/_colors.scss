@@ -1,0 +1,42 @@
+@use "sass:meta";
+@use "sass:color";
+
+@mixin colors($colors...) {
+    @each $name, $color in meta.keywords($colors) {
+        .#{$name}{
+            background-color: $color !important;
+        }
+        
+        
+        .#{$name}--text{
+            color: $color !important;
+        }
+        
+        //lighten
+        @for $i from 1 through 5{
+            
+            .#{$name}-lighten-#{$i}{
+                background-color:  lighten($color, $i*12%) !important;
+            }
+            
+            
+            .#{$name}-lighten-#{$i}--text{
+                color:  lighten($color, $i*12%) !important;
+            }
+        }
+
+        //darken
+        @for $i from 1 through 5{
+            
+            .#{$name}-darken-#{$i}{
+                background-color:  darken($color, $i*12%) !important;
+            }
+            
+            
+            .#{$name}-darken-#{$i}--text{
+                color:  darken($color, $i*12%) !important;
+            }
+        }
+        
+    }
+}

@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@luaguillande/scss_helpers": "^1.5.5",
     "@nuxt/content": "^1.14.0",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/dotenv": "^1.4.1",

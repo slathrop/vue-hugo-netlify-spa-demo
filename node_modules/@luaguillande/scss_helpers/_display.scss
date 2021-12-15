@@ -1,0 +1,35 @@
+// hide or show element
+
+@mixin type($media, $types...) {
+    @each $type in $typesList {
+        
+        .d#{$media}#{$type}{
+            display: $type;
+        }
+    }
+}
+
+$typesList: none, flex, block, inline, inline-block, inline-flex, grid;
+
+@include type('-', $typesList...);
+
+@media (max-width: 420px){ 
+    @include type('-xs-', $typesList...)
+} 
+
+@media (min-width: 421px){ 
+    @include type('-sm-', $typesList...)
+} 
+
+@media (min-width: 800px){ 
+    @include type('-md-', $typesList...)
+}    
+
+@media (min-width: 1025px){ 
+    @include type('-lg-', $typesList...)
+}        
+
+@media (min-width: 1601px){ 
+    @include type('-xl-', $typesList...)
+}            
+
