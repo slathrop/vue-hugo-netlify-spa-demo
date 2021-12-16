@@ -1,90 +1,94 @@
 <template>
 	<v-app>
 		<v-app-bar
-			:clipped-left="clipped"
 			fixed
 			app
-			class="transparent elevation-0"
+			class=""
+			:class="isup ? 'transparent elevation-0' : 'black elevation-2'"
 		>
-			<v-img
-				contain
-				class="fill-height flex-0 sml-22 mt-3"
-				style="min-width: 200px"
-				src="/teatica-logo-n.png"
-			></v-img>
-			<v-spacer />
-			<div class="c-primary spr-24 spl-10 menu-btns">
-				<v-btn
-					class="
-						fill-height
-						black--text
-						transparent
-						spx-5
-						spy-10
-						no-radius
-						mx-0
-					"
-					depressed
-					x-large
-				>
-					<small>QUEM SOMOS</small>
-				</v-btn>
-				<v-btn
-					class="
-						fill-height
-						black--text
-						transparent
-						spx-5
-						spy-10
-						no-radius
-						mx-0
-					"
-					depressed
-					x-large
-				>
-					<small>ACONTECEU NA TEÁTICA</small>
-				</v-btn>
-				<v-btn
-					class="
-						fill-height
-						black--text
-						transparent
-						spx-5
-						spy-10
-						no-radius
-						mx-0
-					"
-					depressed
-					x-large
-				>
-					<small>BLOG</small>
-				</v-btn>
-				<v-btn
-					class="
-						fill-height
-						black--text
-						transparent
-						spx-5
-						spy-10
-						no-radius
-						mx-0
-					"
-					depressed
-					x-large
-				>
-					<small>CONTATO</small>
-				</v-btn>
-				<v-btn
-					class="hidden-md-and-up"
-					icon
-					@click.stop="rightDrawer = !rightDrawer"
-				>
-					<v-icon>mdi-menu</v-icon>
-				</v-btn>
-			</div>
+			<v-flex xs12 md4>
+				<v-img
+					contain
+					class="fill-height flex-0 sml-22"
+					style="width: 170px"
+					src="/teatica-logo-n.png"
+				></v-img>
+				<v-spacer></v-spacer>
+			</v-flex>
+			<v-flex xs12 md8>
+				<div class="c-primary spr-24 spl-10 menu-btns">
+					<v-btn
+						class="
+							fill-height
+							black--text
+							transparent
+							spx-5
+							spy-10
+							no-radius
+							mx-0
+						"
+						depressed
+						x-large
+					>
+						<small>QUEM SOMOS</small>
+					</v-btn>
+					<v-btn
+						class="
+							fill-height
+							black--text
+							transparent
+							spx-5
+							spy-10
+							no-radius
+							mx-0
+						"
+						depressed
+						x-large
+					>
+						<small>ACONTECEU NA TEÁTICA</small>
+					</v-btn>
+					<v-btn
+						class="
+							fill-height
+							black--text
+							transparent
+							spx-5
+							spy-10
+							no-radius
+							mx-0
+						"
+						depressed
+						x-large
+					>
+						<small>BLOG TEÁTICA</small>
+					</v-btn>
+					<v-btn
+						class="
+							fill-height
+							black--text
+							transparent
+							spx-5
+							spy-10
+							no-radius
+							mx-0
+						"
+						depressed
+						x-large
+					>
+						<small>CONTATO</small>
+					</v-btn>
+					<v-btn
+						class="hidden-md-and-up"
+						icon
+						@click.stop="rightDrawer = !rightDrawer"
+					>
+						<v-icon>mdi-menu</v-icon>
+					</v-btn>
+				</div>
+			</v-flex>
 		</v-app-bar>
 		<v-main class="pa-0">
-			<Nuxt />
+			<NuxtChild />
 		</v-main>
 		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 			<v-list>
@@ -96,7 +100,7 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
-		<v-footer :absolute="!fixed" app>
+		<v-footer absolute app>
 			<span>&copy; {{ new Date().getFullYear() }}</span>
 		</v-footer>
 	</v-app>
@@ -106,9 +110,8 @@
 	export default {
 		data() {
 			return {
-				clipped: false,
 				drawer: false,
-				fixed: false,
+				isup: true,
 				items: [
 					{
 						icon: 'mdi-apps',
@@ -121,10 +124,19 @@
 						to: '/inspire',
 					},
 				],
-				miniVariant: false,
+
 				right: true,
 				rightDrawer: false,
 			}
+		},
+		mounted() {
+			addEventListener('scroll', () => {
+				if (scrollY > 200) {
+					this.isup = false
+				} else {
+					this.isup = true
+				}
+			})
 		},
 	}
 </script>
