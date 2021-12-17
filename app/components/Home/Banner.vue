@@ -47,7 +47,7 @@
 <style lang="scss">
 	.banner {
 		background: linear-gradient(#000000c2, #000000d4),
-			url('/banner-bg.jpg') center/cover;
+			url('/banner-bg.jpg') center / cover;
 	}
 
 	.txt1,

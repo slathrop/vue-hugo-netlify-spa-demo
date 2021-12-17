@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/slathrop/vue-hugo-netlify-spa-demo#readme",
   "dependencies": {
-    "@luaguillande/scss_helpers": "^1.5.5"
+    "@luaguillande/scss_helpers": "^1.5.5",
+    "vue": "^2.6.14",
+    "vue-check-view": "^0.3.0"
   }
 }

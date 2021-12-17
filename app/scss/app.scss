@@ -3,7 +3,7 @@
 @import './_color_set.scss';
 
 
-$scroll-color: $c-primary;
+$scroll-color: #a5a5a5;
 
 @import "./_scroll";
 
@@ -43,4 +43,7 @@ $scroll-color: $c-primary;
 
 .subtitulo {
     font-size: calc(20px + 0.25vw);
+}
+.subtitulo2 {
+    font-size: calc(15px + 0.15vw);
 }

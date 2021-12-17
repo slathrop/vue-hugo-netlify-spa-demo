@@ -6,7 +6,7 @@
 			class=""
 			:class="isup ? 'transparent elevation-0' : 'black elevation-2'"
 		>
-			<v-flex xs12 md4>
+			<v-flex xs12 md4 lg3>
 				<v-img
 					contain
 					class="fill-height flex-0 sml-22"
@@ -15,8 +15,8 @@
 				></v-img>
 				<v-spacer></v-spacer>
 			</v-flex>
-			<v-flex xs12 md8>
-				<div class="c-primary spr-24 spl-10 menu-btns">
+			<v-flex xs12 md8 lg9>
+				<div class="c-primary spr-24 spl-10 menu-btns d-flex justify-end">
 					<v-btn
 						class="
 							fill-height
@@ -100,7 +100,7 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
-		<v-footer absolute app>
+		<v-footer>
 			<span>&copy; {{ new Date().getFullYear() }}</span>
 		</v-footer>
 	</v-app>

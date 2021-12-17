@@ -1,20 +1,32 @@
 <template>
-	<v-layout style="margin-top: -50px">
-		<v-flex xs12 md4> Img </v-flex>
-		<v-flex xs12 md8 class="white">
-			<v-layout class="spa-24 flex-wrap">
+	<v-layout>
+		<v-flex xs12 md8 lg9 class="white">
+			<v-layout
+				style="margin-top: -50px; margin-bottom: -50px"
+				class="spx-20 pt-5 flex-wrap justify-space-evenly white"
+			>
 				<v-flex
 					xs12
 					md6
-					lg4
-					v-for="({ nome, url, img }, i) in produtos"
+					lg3
+					v-for="({ nome, img }, i) in produtos"
 					:key="i"
+					class="smy-10"
 				>
-					<h1>{{ nome }}</h1>
-					{{ img }}
-					{{ url }}
+					<v-img
+						style="max-width: 100px"
+						class="mx-auto"
+						contain
+						:src="img"
+					></v-img>
+					<h1 class="subtitulo2 font-600 text-center text-uppercase">
+						{{ nome }}
+					</h1>
 				</v-flex>
 			</v-layout>
+		</v-flex>
+		<v-flex xs12 md4 lg3 class="c-primary">
+			<v-img class="mx-auto" contain src="/produtos/bg.png"></v-img>
 		</v-flex>
 	</v-layout>
 </template>
@@ -26,42 +38,34 @@
 				produtos: [
 					{
 						nome: 'Faculdade Teática',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Colégio Teática',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Portal de Cursos Digitais',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Escola de Saúde',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Hospital Veterinário',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Centro Integrado de Saúde',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Hub de Inovação',
-						url: '',
 						img: '',
 					},
 					{
 						nome: 'Gestão Interina de IES',
-						url: '',
 						img: '',
 					},
 				],
