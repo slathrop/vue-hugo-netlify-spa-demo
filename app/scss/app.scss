@@ -11,6 +11,7 @@ $scroll-color: #a5a5a5;
     $c-primary:  $c-primary,
     $c-secondary: $c-secondary,
     $c-error: $c-error,
+    $c-info: $c-info,
     // ...
 );
 
@@ -18,12 +19,21 @@ $scroll-color: #a5a5a5;
     flex: 0 !important;
 }
 
+.no-underline{
+    text-decoration: unset;
+}
 .no-radius{
     border-radius: 0px !important
+}
+.radius{
+    border-radius: 500px !important
 }
 
 .absolute{
     position: absolute;
+}
+.relative{
+    position: relative;
 }
 
 .v-application{

@@ -6,72 +6,61 @@
 			class=""
 			:class="isup ? 'transparent elevation-0' : 'black elevation-2'"
 		>
-			<v-flex xs12 md4 lg3>
-				<v-img
-					contain
-					class="fill-height flex-0 sml-22"
-					style="width: 170px"
-					src="/teatica-logo-n.png"
-				></v-img>
+			<v-flex xs12 md4 lg3 class="fill-height">
+				<a href="/">
+					<v-img
+						contain
+						class="fill-height flex-0 sml-22"
+						style="width: 170px"
+						src="/teatica-logo-n.png"
+					></v-img>
+				</a>
 				<v-spacer></v-spacer>
 			</v-flex>
-			<v-flex xs12 md8 lg9>
-				<div class="c-primary spr-24 spl-10 menu-btns d-flex justify-end">
+			<v-flex xs12 md8 lg9 class="fill-height">
+				<div
+					class="
+						c-primary
+						spr-24
+						spl-10
+						menu-btns
+						d-flex
+						justify-end
+						fill-height
+					"
+				>
 					<v-btn
-						class="
-							fill-height
-							black--text
-							transparent
-							spx-5
-							spy-10
-							no-radius
-							mx-0
-						"
+						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
+						href="/"
+					>
+						<small>HOME</small>
+					</v-btn>
+					<v-btn
+						class="fill-height black--text transparent spx-5 no-radius mx-0"
+						depressed
+						x-large
+						href="/quem-somos"
 					>
 						<small>QUEM SOMOS</small>
 					</v-btn>
 					<v-btn
-						class="
-							fill-height
-							black--text
-							transparent
-							spx-5
-							spy-10
-							no-radius
-							mx-0
-						"
+						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
 					>
 						<small>ACONTECEU NA TEÁTICA</small>
 					</v-btn>
 					<v-btn
-						class="
-							fill-height
-							black--text
-							transparent
-							spx-5
-							spy-10
-							no-radius
-							mx-0
-						"
+						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
 					>
 						<small>BLOG TEÁTICA</small>
 					</v-btn>
 					<v-btn
-						class="
-							fill-height
-							black--text
-							transparent
-							spx-5
-							spy-10
-							no-radius
-							mx-0
-						"
+						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
 					>
@@ -100,9 +89,213 @@
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
-		<v-footer>
-			<span>&copy; {{ new Date().getFullYear() }}</span>
+		<!-- <v-layout class="relative" style="z-index: 6; height: 10px">
+			<v-flex xs12 md6 lg3 class="spl-24 grey darken-4"> &nbsp;</v-flex>
+			<v-flex xs12 md8 lg9 class="c-primary"> &nbsp;</v-flex>
+		</v-layout> -->
+		<v-footer
+			class="black spy-15 align-start relative pa-0"
+			style="min-height: calc(100vh - 10px - 32px); z-index: 6"
+		>
+			<v-flex xs12 md4 lg3 class="spl-24 fill-height spt-20 grey darken-4">
+				<v-img
+					contain
+					class=""
+					style="width: 170px; height: 50px"
+					src="/teatica-logo-n.png"
+				></v-img>
+				<br />
+				<br />
+
+				<a class="white--text no-underline" href="mailto:contato@teatica.com">
+					<p>
+						<v-icon small class="c-primary--text mr-2">fas fa-envelope</v-icon>
+						contato@teatica.com
+					</p>
+				</a>
+				<p class="white--text">
+					&nbsp;<v-icon small class="c-primary--text mr-2"
+						>fas fa-map-marker-alt</v-icon
+					>
+					Foz do Iguaçu / Paraná
+				</p>
+			</v-flex>
+			<v-flex xs12 md8 lg9 class="black fill-height spt-20">
+				<div style="margin-top: 50px"></div>
+				<!-- <v-divider class="mx-10 mb-5 c-primary"></v-divider> -->
+				<br />
+				<br />
+
+				<v-layout class="white--text">
+					<v-flex class="spl-24">
+						<a class="white--text no-underline" href="/quem-somos">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Quem Somos</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Aconteceu na Teática</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Blog Teática</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Contato</p>
+						</a>
+					</v-flex>
+					<v-flex>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Faculdade Teática</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Graduação Presencial</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Graduação Digital</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Pós-Graduação Digital</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Curso de Extensão Digital</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Metodologia Educacional</p>
+						</a>
+					</v-flex>
+					<v-flex>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Colégio Teática</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Portal de Cursos Digitais</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Escola de Saúde</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Centro Integrado de Saúde</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Hospital Veterinário</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Hub de Inovação</p>
+						</a>
+						<a class="white--text no-underline" href="">
+							<v-icon
+								class="mr-2 pt-1 c-primary--text"
+								small
+								style="float: left"
+								>fas fa-caret-right</v-icon
+							>
+							<p>Gestão Interina de IES</p>
+						</a>
+					</v-flex>
+				</v-layout>
+			</v-flex>
 		</v-footer>
+		<v-layout class="black text-center black--text">
+			<v-flex xs12 md4 lg3 class="fill-height grey darken-4"></v-flex>
+			<v-flex>
+				<v-divider></v-divider>
+				<p class="mt-2 mb-1">31 Solutions @ 2021</p>
+			</v-flex>
+		</v-layout>
 	</v-app>
 </template>
 
@@ -151,6 +344,9 @@
 	}
 	.menu-btns {
 		overflow: hidden;
+		.v-btn {
+			height: 64px !important;
+		}
 		.v-btn::after {
 			height: 4px;
 			width: 100%;
