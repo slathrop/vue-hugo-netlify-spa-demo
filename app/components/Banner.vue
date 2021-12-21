@@ -1,26 +1,50 @@
 <template>
 	<div
-		class="black fill-width banner d-flex align-center spl-24"
-		style="top: 0; height: calc(100vh + 50px)"
+		class="black fill-width banner-quem-somos d-flex align-center spl-24"
+		:style="computedStyle"
 	>
 		<div class="spl-20">
 			<div
-				class="white--text titulo-banner font-100 mt-10 sml-24 spl-24"
+				class="
+					white--text
+					titulo-banner
+					font-100
+					mt-10
+					sml-24
+					spl-24
+					txt-banner
+				"
 				style="text-shadow: 0 0 10px black"
 			>
-				<div class="font-200 txt1">APRENDIZAGEM</div>
-				<div class="font-800 txt2">EVOLUTIVA</div>
+				<div class="font-200 txt1">{{ txt1 }}</div>
+				<div class="font-800 txt2">{{ txt2 }}</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
 	export default {
+		props: ['img', 'txt1', 'txt2', 'height'],
 		data() {
 			return {
 				estasubindo: false,
 				oldScroll: 2,
 			}
+		},
+		computed: {
+			computedStyle() {
+				let i = this.img ? this.img : '/pattern-hor.jpg'
+				let img = `background: linear-gradient(#000000d1, #000000e3), url(${i}) center / cover`
+
+				let h = this.height ? this.height : 'calc(50vh + 50px)'
+				let height = `height: ${h}`
+
+				let top = `top: 0`
+
+				let style = `${img}; ${top}; ${height}`
+
+				return style
+			},
 		},
 		mounted() {
 			addEventListener('scroll', () => {
@@ -45,14 +69,11 @@
 </script>
 
 <style lang="scss">
-	.banner {
-		background: linear-gradient(#000000c2, #000000d4),
-			url('/banner-bg.jpg') center / cover;
-	}
-
-	.txt1,
 	.txt2 {
-		animation: entrando 2s;
+		animation: estasubindo 0.9s;
+	}
+	.txt1 {
+		animation: estasubindo 0.7s;
 	}
 	.txt2.estasubindo {
 		animation: estasubindo 0.9s;
@@ -70,17 +91,6 @@
 		margin-left: 100vw;
 	}
 
-	@keyframes entrando {
-		0% {
-			margin-left: -100vw;
-		}
-		50% {
-			margin-left: -100vw;
-		}
-		100% {
-			margin-left: 0;
-		}
-	}
 	@keyframes estasubindo {
 		from {
 			margin-left: -100vw;

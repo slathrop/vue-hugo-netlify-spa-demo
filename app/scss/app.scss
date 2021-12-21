@@ -15,6 +15,14 @@ $scroll-color: #a5a5a5;
     // ...
 );
 
+.layout-enter-active,
+	.layout-leave-active {
+		transition: opacity 3s;
+}
+.layout-enter, .layout-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+    opacity: 0;
+}
+
 .flex-0{
     flex: 0 !important;
 }

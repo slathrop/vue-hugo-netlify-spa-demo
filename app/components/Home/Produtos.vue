@@ -7,7 +7,7 @@
 				src="/pattern.jpg"
 			></v-img>
 		</v-flex>
-		<v-flex xs12 md8 lg9 class="white elevation-4" style="z-index: 2">
+		<v-flex xs12 md8 lg9 class="white elevation-4 produtos" style="z-index: 2">
 			<HomeProdutosItems></HomeProdutosItems>
 		</v-flex>
 	</v-layout>
@@ -25,5 +25,10 @@
 		background-attachment: fixed;
 		background-size: 35%;
 		background-position: left !important;
+	}
+	.produtos {
+		@media (max-width: 1600px) {
+			min-height: 440px;
+		}
 	}
 </style>

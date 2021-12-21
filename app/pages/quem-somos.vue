@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<QuemSomosBanner></QuemSomosBanner>
+		<Banner txt1="QUEM" txt2="SOMOS"></Banner>
 		<div class="spa-24">
 			<p class="spx-24 text-center">
 				<big
@@ -30,81 +30,153 @@
 					seguintes pessoas:
 				</p>
 			</v-flex>
-			<v-flex xs12 md8 lg9 class="spx-24">
-				<span class="c-primary spa-3 d-inline">
-					<p class="d-inline">CONSELHO DELIBERATIVO</p>
-				</span>
-				<v-layout class="flex-wrap mt-10">
-					<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
-						<v-flex xs12 md5>
-							<v-img
-								style="border-radius: 300px"
-								class="smr-5"
-								src="/staff/ryon.jpg"
-							></v-img>
+			<v-flex xs12 md8 lg9 class="spx-24 pt-2">
+				<div data-aos="fade-right" data-aos-delay="250">
+					<span class="c-primary spx-3 spy-1 d-inline">
+						<p class="d-inline font-800">CONSELHO DELIBERATIVO</p>
+					</span>
+					<v-layout class="flex-wrap mt-10">
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5"
+									src="/staff/ryon.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Ryon Braga</p>
+							</v-flex>
 						</v-flex>
-						<v-flex>
-							<p class="font-600">Ryon Braga</p>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info c-info"
+									src="/staff/cristina.png"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Cristina Dalvi Davel</p>
+							</v-flex>
 						</v-flex>
-					</v-flex>
-					<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
-						<v-flex xs12 md5>
-							<v-img
-								style="border-radius: 300px"
-								class="smr-5 c-info"
-								src="/staff/cristina.png"
-							></v-img>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/lucia.png"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Lúcia Helena Makhlouf</p>
+							</v-flex>
 						</v-flex>
-						<v-flex>
-							<p class="font-600">Cristina Dalvi Davel</p>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/djalma.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">José Djalma Cajado da Fonseca</p>
+							</v-flex>
 						</v-flex>
-					</v-flex>
-					<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
-						<v-flex xs12 md5>
-							<v-img
-								style="border-radius: 300px"
-								class="smr-5"
-								src="/staff/lucia.png"
-							></v-img>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/norma.png"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Norma Viapiana Golfeto</p>
+							</v-flex>
 						</v-flex>
-						<v-flex>
-							<p class="font-600">Lúcia Helena Makhlouf</p>
-						</v-flex>
-					</v-flex>
-					<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
-						<v-flex xs12 md5>
-							<v-img
-								style="border-radius: 300px"
-								class="smr-5"
-								src="/staff/ryon.jpg"
-							></v-img>
-						</v-flex>
-						<v-flex>
-							<p class="font-600">José Djalma Cajado da Fonseca</p>
-						</v-flex>
-					</v-flex>
-					<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
-						<v-flex xs12 md5>
-							<v-img
-								style="border-radius: 300px"
-								class="smr-5"
-								src="/staff/norma.png"
-							></v-img>
-						</v-flex>
-						<v-flex>
-							<p class="font-600">Norma Viapiana Golfeto</p>
-						</v-flex>
-					</v-flex>
-				</v-layout>
+					</v-layout>
+					<br />
+					<br />
+				</div>
+				<div data-aos="fade-right" data-aos-delay="500">
+					<span class="c-primary spx-3 spy-1 d-inline">
+						<p class="d-inline font-800">CONSELHO FISCAL</p>
+					</span>
 
-				<p>CONSELHO FISCAL</p>
-				<p>Graça Souza</p>
-				<p>Otávio Augusto Araújo</p>
-				<p>Maria Izabel Conceição</p>
-
-				<p>DIRETORIA EXECUTIVA</p>
-				<p>Ryon Braga</p>
-				<p>José Djalma Cajado da Fonseca</p>
+					<v-layout class="flex-wrap mt-10">
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/graca.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Graça Souza</p>
+							</v-flex>
+						</v-flex>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/otavio.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Otávio Augusto Araújo</p>
+							</v-flex>
+						</v-flex>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/izabel.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Maria Izabel Conceição</p>
+							</v-flex>
+						</v-flex>
+					</v-layout>
+					<br />
+					<br />
+				</div>
+				<div data-aos="fade-right" data-aos-delay="750">
+					<span class="c-primary spx-3 spy-1 d-inline">
+						<p class="d-inline font-800">DIRETORIA EXECUTIVA</p>
+					</span>
+					<v-layout class="flex-wrap mt-10">
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5"
+									src="/staff/ryon.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">Ryon Braga</p>
+							</v-flex>
+						</v-flex>
+						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+							<v-flex xs12 md5>
+								<v-img
+									style="border-radius: 300px"
+									class="smr-5 c-info"
+									src="/staff/djalma.jpg"
+								></v-img>
+							</v-flex>
+							<v-flex>
+								<p class="font-600">José Djalma Cajado da Fonseca</p>
+							</v-flex>
+						</v-flex>
+					</v-layout>
+				</div>
 			</v-flex>
 		</v-layout>
 	</div>

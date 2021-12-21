@@ -9,6 +9,7 @@
 			<v-flex xs12 md4 lg3 class="fill-height">
 				<a href="/">
 					<v-img
+						@load="contentLoaded"
 						contain
 						class="fill-height flex-0 sml-22"
 						style="width: 170px"
@@ -63,6 +64,7 @@
 						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
+						href="/#contato"
 					>
 						<small>CONTATO</small>
 					</v-btn>
@@ -77,7 +79,7 @@
 			</v-flex>
 		</v-app-bar>
 		<v-main class="pa-0">
-			<NuxtChild />
+			<NuxtChild keep-alive />
 		</v-main>
 		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 			<v-list>
@@ -322,7 +324,17 @@
 				rightDrawer: false,
 			}
 		},
+		methods: {
+			contentLoaded() {
+				$nuxt.$emit('content-loaded')
+			},
+		},
 		mounted() {
+			let txtbanner = document.querySelector('.txt-banner')
+			if (txtbanner) {
+				txtbanner.style.display = 'none'
+			}
+
 			addEventListener('scroll', () => {
 				if (scrollY > 200) {
 					this.isup = false
@@ -330,6 +342,17 @@
 					this.isup = true
 				}
 			})
+			if (scrollY > 200) {
+				this.isup = false
+			} else {
+				this.isup = true
+			}
+
+			if (txtbanner) {
+				this.$nuxt.$on('content-loaded', () => {
+					document.querySelector('.txt-banner').style.display = 'block'
+				})
+			}
 		},
 	}
 </script>

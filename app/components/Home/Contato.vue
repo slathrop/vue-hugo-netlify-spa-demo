@@ -1,13 +1,13 @@
 <template>
 	<v-layout
 		class="grey lighten-3 relative align-center align-center spb-14"
-		style="margin-top: -50px; z-index: 1; padding-top: 90px"
+		style="margin-top: -50px; z-index: 1; padding-top: 90px; min-height: 100vh"
+		id="contato"
 	>
 		<v-flex xs12 md4 lg3 offset-lg1 class="spx-10 titulo c-secondary--text">
 			<div
 				data-aos="flip-right"
 				data-aos-delay="300"
-				data-aos-offset="400"
 				class="spx-12 spt-15 spb-10 radius align-center d-flex justify-center"
 				style="background: linear-gradient(143deg, #ffdf42 50%, #efc912 50%)"
 			>
