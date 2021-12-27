@@ -13,7 +13,7 @@
 						contain
 						class="fill-height flex-0 sml-22"
 						style="width: 170px"
-						src="/teatica-logo-n.png"
+						:src="`/teatica-logo${isup ? '-n' : '-n'}.png`"
 					></v-img>
 				</a>
 				<v-spacer></v-spacer>
@@ -34,40 +34,14 @@
 						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
-						to="/"
+						:class="item.path === pathname ? 'is-selected' : ''"
+						:to="item.path"
+						v-for="(item, i) in items"
+						:key="i"
 					>
-						<small>HOME</small>
+						{{ item.name }}
 					</v-btn>
-					<v-btn
-						class="fill-height black--text transparent spx-5 no-radius mx-0"
-						depressed
-						x-large
-						to="/quem-somos"
-					>
-						<small>QUEM SOMOS</small>
-					</v-btn>
-					<v-btn
-						class="fill-height black--text transparent spx-5 no-radius mx-0"
-						depressed
-						x-large
-					>
-						<small>ACONTECEU NA TEÁTICA</small>
-					</v-btn>
-					<v-btn
-						class="fill-height black--text transparent spx-5 no-radius mx-0"
-						depressed
-						x-large
-					>
-						<small>BLOG TEÁTICA</small>
-					</v-btn>
-					<v-btn
-						class="fill-height black--text transparent spx-5 no-radius mx-0"
-						depressed
-						x-large
-						to="/#contato"
-					>
-						<small>CONTATO</small>
-					</v-btn>
+
 					<v-btn
 						class="hidden-md-and-up"
 						icon
@@ -78,8 +52,9 @@
 				</div>
 			</v-flex>
 		</v-app-bar>
+		<slot name="submenu"></slot>
 		<v-main class="pa-0">
-			<NuxtChild keep-alive />
+			<NuxtChild keep-alive :isup="isup" />
 		</v-main>
 		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 			<v-list>
@@ -307,16 +282,23 @@
 			return {
 				drawer: false,
 				isup: true,
+				pathname: '',
 				items: [
 					{
-						icon: 'mdi-apps',
-						title: 'Welcome',
-						to: '/',
+						name: 'HOME',
+						path: '/',
 					},
 					{
-						icon: 'mdi-chart-bubble',
-						title: 'Inspire',
-						to: '/inspire',
+						name: 'QUEM SOMOS',
+						path: '/quem-somos',
+					},
+					{
+						name: 'FACULDADE TEÁTICA',
+						path: '/faculdade-teatica',
+					},
+					{
+						name: 'CONTATO',
+						path: '/#contato',
 					},
 				],
 
@@ -329,7 +311,16 @@
 				$nuxt.$emit('content-loaded')
 			},
 		},
+
+		watch: {
+			$route(to, from) {
+				console.log(to.fullPath)
+				this.pathname = to.fullPath
+			},
+		},
 		mounted() {
+			this.pathname = location.pathname
+
 			let txtbanner = document.querySelector('.txt-banner')
 			if (txtbanner) {
 				txtbanner.style.display = 'none'
@@ -366,27 +357,27 @@
 		padding: 0;
 	}
 	.menu-btns {
-		overflow: hidden;
 		.v-btn {
+			overflow: visible !important;
 			height: 64px !important;
-		}
-		.v-btn::after {
-			height: 4px;
-			width: 100%;
-			content: '';
-			background: black;
-			position: absolute;
-			bottom: -6px;
-			transition: all 0.3s;
-		}
-		.v-btn:hover {
-			&:after {
-				bottom: 0;
-
-				transition: all 0.3s;
-			}
+			font-size: 15px;
 			&::before {
 				opacity: 0 !important;
+			}
+
+			&:hover::after,
+			&.is-selected::after {
+				height: 4px;
+				width: 100% !important;
+				content: '';
+				position: absolute;
+				transition: all 0.3s, background 0.2s;
+				background: transparent !important;
+				bottom: 0px;
+				width: 7px !important;
+				border-left: 7px solid transparent !important;
+				border-right: 7px solid transparent !important;
+				border-bottom: 7px solid black !important;
 			}
 		}
 	}

@@ -9,7 +9,7 @@
 			lg3
 			v-for="({ nome, img, url }, i) in produtos"
 			:key="i"
-			data-aos="fade-right "
+			data-aos="fade-right"
 			:data-aos-delay="i * 50"
 			class="smy-10"
 		>

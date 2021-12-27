@@ -6,6 +6,8 @@ export default async ({ app }) => {
           AOS.refreshHard();
       }, 1000);
   });
+
+
 //   app.router.beforeEach((to, from) => {
 //       AOS.init();
 //       AOS.refresh();
