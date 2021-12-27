@@ -34,7 +34,7 @@
 						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
-						href="/"
+						to="/"
 					>
 						<small>HOME</small>
 					</v-btn>
@@ -42,7 +42,7 @@
 						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
-						href="/quem-somos"
+						to="/quem-somos"
 					>
 						<small>QUEM SOMOS</small>
 					</v-btn>
@@ -64,7 +64,7 @@
 						class="fill-height black--text transparent spx-5 no-radius mx-0"
 						depressed
 						x-large
-						href="/#contato"
+						to="/#contato"
 					>
 						<small>CONTATO</small>
 					</v-btn>

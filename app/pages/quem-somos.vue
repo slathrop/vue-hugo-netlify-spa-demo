@@ -183,11 +183,7 @@
 </template>
 
 <script>
-	export default {
-		mounted() {
-			AOS.init()
-		},
-	}
+	export default {}
 	// export default {
 	//   async asyncData({ $http }) {
 	//     const blogs = JSON.parse(await $http.$get('/blog/index.json'))

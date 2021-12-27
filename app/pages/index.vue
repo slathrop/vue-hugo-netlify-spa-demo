@@ -13,10 +13,6 @@
 </template>
 
 <script>
-	export default {
-		mounted() {
-			AOS.init()
-		},
-	}
+	export default {}
 </script>
 
