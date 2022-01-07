@@ -33,7 +33,7 @@ export default {
     ],
     script: [
       { hid: 'stripe', src: 'https://unpkg.com/aos@2.3.1/dist/aos.js', defer: true },
-      {src:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js'}
+      {src:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js'},
       
     ]
   },
@@ -45,7 +45,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/after-each.js', mode: 'client' }
+    { src: '~/plugins/after-each.js', mode: 'client' },
+    { src: '~/plugins/vue-check-view.js', mode: 'client' }
+    
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

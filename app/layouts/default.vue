@@ -2,6 +2,7 @@
 	<v-app>
 		<v-app-bar
 			fixed
+			:style="{ marginTop: onFooter ? '-64px' : '0', transition: 'all 0.2s' }"
 			app
 			class=""
 			:class="isup ? 'transparent elevation-0' : 'black elevation-2'"
@@ -54,7 +55,7 @@
 		</v-app-bar>
 		<slot name="submenu"></slot>
 		<v-main class="pa-0">
-			<NuxtChild keep-alive :isup="isup" />
+			<NuxtChild keep-alive :isup="isup" :onFooter="onFooter" />
 		</v-main>
 		<v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
 			<v-list>
@@ -70,9 +71,17 @@
 			<v-flex xs12 md6 lg3 class="spl-24 grey darken-4"> &nbsp;</v-flex>
 			<v-flex xs12 md8 lg9 class="c-primary"> &nbsp;</v-flex>
 		</v-layout> -->
+		<br />
+		<br />
+		<br />
 		<v-footer
 			class="black spy-15 align-start relative pa-0"
-			style="min-height: calc(100vh - 10px - 32px); z-index: 6"
+			style="
+				min-height: calc(100vh - 10px - 80px - 32px);
+				z-index: 6;
+				margin-top: 100px;
+			"
+			v-view="changeOnFooter"
 		>
 			<v-flex xs12 md4 lg3 class="spl-24 fill-height spt-20 grey darken-4">
 				<v-img
@@ -98,7 +107,17 @@
 				</p>
 			</v-flex>
 			<v-flex xs12 md8 lg9 class="black fill-height spt-20">
-				<div style="margin-top: 50px"></div>
+				<div
+					class="c-primary sml-20 px-10 pt-4 pb-3"
+					style="margin-top: calc(-100px - 2vw) !important"
+				>
+					<h1 class="mt-0 font-300">Cadastre-se na nossa newsletter</h1>
+
+					<v-layout>
+						<v-text-field solo class="smr-10" label="E-mail"></v-text-field>
+						<v-btn height="46px">Enviar</v-btn>
+					</v-layout>
+				</div>
 				<!-- <v-divider class="mx-10 mb-5 c-primary"></v-divider> -->
 				<br />
 				<br />
@@ -266,10 +285,10 @@
 				</v-layout>
 			</v-flex>
 		</v-footer>
-		<v-layout class="black text-center black--text">
+		<v-layout class="black text-center grey--text text--darken-4">
 			<v-flex xs12 md4 lg3 class="fill-height grey darken-4"></v-flex>
 			<v-flex>
-				<v-divider></v-divider>
+				<v-divider class="grey darken-4 smx-20"></v-divider>
 				<p class="mt-2 mb-1">31 Solutions @ 2021</p>
 			</v-flex>
 		</v-layout>
@@ -304,17 +323,25 @@
 
 				right: true,
 				rightDrawer: false,
+				onFooter: false,
 			}
 		},
 		methods: {
 			contentLoaded() {
 				$nuxt.$emit('content-loaded')
 			},
+			changeOnFooter(e) {
+				console.log(e)
+				if (e.percentInView >= 0.8) {
+					this.onFooter = true
+				} else {
+					this.onFooter = false
+				}
+			},
 		},
 
 		watch: {
 			$route(to, from) {
-				console.log(to.fullPath)
 				this.pathname = to.fullPath
 			},
 		},

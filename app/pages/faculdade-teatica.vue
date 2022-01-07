@@ -5,6 +5,10 @@
 				class="fill-width fixed"
 				:class="isup ? 'elevation-0' : 'elevation-0'"
 				style="z-index: 6; top: 64px"
+				:style="{
+					marginTop: onFooter ? '-100px' : '0',
+					transition: 'all 0.2s',
+				}"
 			>
 				<v-flex xs12 md4 lg3 :class="passoudobanner ? 'white' : 'transparent'">
 				</v-flex>
@@ -33,17 +37,29 @@
 			img="/faculdade.jpg"
 			height="calc(100vh + 50px)"
 		></Banner>
+		<div class="spx-24 pt-6">
+			<h1 class="font-300">Pós-Graduação</h1>
+			<v-layout v-for="(p, i) in pos" :key="i">
+				<v-flex xs12 md4 lg3>
+					<v-img :src="p.img"></v-img>
+					{{ p.name }}
+				</v-flex>
+			</v-layout>
 
-		<h1>Graduação Presencial</h1>
-		<h1>Graduação Digital</h1>
-		<h1>Pós Graduação</h1>
+			<h1 class="font-300">Graduação Presencial</h1>
+			<p>Em breve</p>
+			<h1 class="font-300">Graduação Digital</h1>
+			<p>Em breve</p>
+		</div>
 	</div>
 </template>
 
 <script>
+	import pos from '../pos.js'
 	export default {
 		data() {
 			return {
+				pos,
 				passoudobanner: false,
 				items: [
 					{ name: 'Graduação Presencial', path: '/graduacao-presencial' },
@@ -57,6 +73,9 @@
 		computed: {
 			isup() {
 				return this.$attrs.isup
+			},
+			onFooter() {
+				return this.$attrs.onFooter
 			},
 		},
 		mounted() {
