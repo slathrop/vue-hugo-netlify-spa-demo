@@ -35,7 +35,8 @@
 			txt1="FACULDADE"
 			txt2="TEATICA"
 			img="/faculdade.jpg"
-			height="calc(100vh + 50px)"
+			height="calc(60vh + 50px)"
+			ref="banner"
 		></Banner>
 		<div class="spx-24 pt-6">
 			<h1 class="font-300">Pós-Graduação</h1>
@@ -79,11 +80,23 @@
 			onFooter() {
 				return this.$attrs.onFooter
 			},
+			banner() {
+				return this.$refs.banner
+			},
 		},
 		mounted() {
-			this.passoudobanner = innerHeight < scrollY
+			let bh = this.banner.$el.offsetHeight - 76
+			this.passoudobanner = bh < scrollY
 			addEventListener('scroll', () => {
-				this.passoudobanner = innerHeight < scrollY
+				console.log(
+					'scroll',
+					scrollY,
+					'bh',
+					bh,
+					'oh',
+					this.banner.$el.offsetHeight
+				)
+				this.passoudobanner = bh < scrollY
 			})
 		},
 	}
