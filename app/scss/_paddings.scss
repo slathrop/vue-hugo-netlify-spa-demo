@@ -1,0 +1,48 @@
+// padding All responsivo
+
+$spt: padding-top;
+$spb: padding-bottom;
+$spl: padding-left;
+$spr: padding-right;
+
+@mixin type($media, $types...) {
+    @each $type in $typesList {
+        @for $i from 0 through 24 {
+            
+            $value: calc(#{$i * 2}px + #{$i * .1}vw) !important;
+            
+            .#{$type}#{$media}#{$i}{
+                @if $type == spa or $type == spt or $type == spy {#{$spt}: $value;}
+                @if $type == spa or $type == spb or $type == spy {#{$spb}: $value;}
+                @if $type == spa or $type == spl or $type == spx{#{$spl}: $value;}
+                @if $type == spa or $type == spr or $type == spx{#{$spr}: $value;}
+            }
+        }
+    }
+}
+
+$typesList: spa, spy, spx, spl, spr, spt, spb;
+
+@include type('-', $typesList...);
+
+@media (max-width: 420px){ 
+    @include type('-xs-', $typesList...)
+} 
+
+@media (min-width: 421px){ 
+    @include type('-sm-', $typesList...)
+} 
+
+@media (min-width: 800px){ 
+    @include type('-md-', $typesList...)
+}    
+
+@media (min-width: 1025px){ 
+    @include type('-lg-', $typesList...)
+}        
+
+@media (min-width: 1601px){ 
+    @include type('-xl-', $typesList...)
+}            
+
+

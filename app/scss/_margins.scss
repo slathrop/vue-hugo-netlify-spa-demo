@@ -1,0 +1,49 @@
+// margin All responsivo
+
+$smt: margin-top;
+$smb: margin-bottom;
+$sml: margin-left;
+$smr: margin-right;
+
+@mixin type($media, $types...) {
+    @each $type in $typesList {
+        @for $i from 0 through 24 {
+            
+            $value: calc(#{$i * 1.5}px + #{$i * .15}vw) !important;
+
+            .#{$type}#{$media}#{$i}{
+                @if $type == sma or $type == smt or $type == smy {#{$smt}: $value;}
+                @if $type == sma or $type == smb or $type == smy {#{$smb}: $value;}
+                @if $type == sma or $type == sml or $type == smx{#{$sml}: $value;}
+                @if $type == sma or $type == smr or $type == smx{#{$smr}: $value;}
+            }
+        }
+    }
+}
+
+$typesList: sma, smy, smx, sml, smr, smt, smb;
+
+@include type('-', $typesList...);
+
+@media (max-width: 420px){ 
+    @include type('-xs-', $typesList...)
+} 
+
+@media (min-width: 421px){ 
+    @include type('-sm-', $typesList...)
+} 
+
+@media (min-width: 800px){ 
+    @include type('-md-', $typesList...)
+}    
+
+@media (min-width: 1025px){ 
+    @include type('-lg-', $typesList...)
+}        
+
+@media (min-width: 1601px){ 
+    @include type('-xl-', $typesList...)
+}            
+
+
+
