@@ -58,11 +58,9 @@
 </template>
 
 <script>
-	import pos from '../pos.js'
 	export default {
 		data() {
 			return {
-				pos,
 				passoudobanner: false,
 				items: [
 					{ name: 'Graduação Presencial', path: '/graduacao-presencial' },
@@ -88,14 +86,6 @@
 			let bh = this.banner.$el.offsetHeight - 76
 			this.passoudobanner = bh < scrollY
 			addEventListener('scroll', () => {
-				console.log(
-					'scroll',
-					scrollY,
-					'bh',
-					bh,
-					'oh',
-					this.banner.$el.offsetHeight
-				)
 				this.passoudobanner = bh < scrollY
 			})
 		},
