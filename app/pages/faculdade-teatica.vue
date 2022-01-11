@@ -86,14 +86,6 @@ export default {
     let bh = this.banner.$el.offsetHeight - 76
     this.passoudobanner = bh < scrollY
     addEventListener('scroll', () => {
-      console.log(
-        'scroll',
-        scrollY,
-        'bh',
-        bh,
-        'oh',
-        this.banner.$el.offsetHeight
-      )
       this.passoudobanner = bh < scrollY
     })
   },

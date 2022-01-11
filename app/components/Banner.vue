@@ -34,7 +34,7 @@ export default {
   computed: {
     computedStyle() {
       let i = this.img ? this.img : '/pattern-hor.jpg'
-      let img = `background: linear-gradient(#000000a8, #000000b8), url(${i}) center / cover`
+      let img = `background: url(${i}) center / cover`
 
       let h = this.height ? this.height : 'calc(50vh + 50px)'
       let height = `height: ${h}`
