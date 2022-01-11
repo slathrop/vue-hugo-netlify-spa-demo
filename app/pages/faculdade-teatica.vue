@@ -52,6 +52,8 @@
       <h1 class="font-300">Graduação Digital</h1>
       <p>Em breve</p>
     </div>
+
+    <h1 class="font-300">Metodologia</h1>
   </div>
 </template>
 
