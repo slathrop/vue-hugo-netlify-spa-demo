@@ -58,11 +58,9 @@
 </template>
 
 <script>
-import pos from '../pos.js'
 export default {
   data() {
     return {
-      pos,
       passoudobanner: false,
       items: [
         { name: 'Graduação Presencial', path: '/graduacao-presencial' },
