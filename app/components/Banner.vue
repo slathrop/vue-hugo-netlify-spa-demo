@@ -1,25 +1,17 @@
 <template>
   <div
-    class="black fill-width banner-quem-somos d-flex align-center spl-24"
+    class="black fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
-    <div class="spl-20">
+    <v-flex offset-lg3>
       <div
-        class="
-          white--text
-          titulo-banner
-          font-100
-          mt-10
-          sml-24
-          spl-24
-          txt-banner
-        "
+        class="white--text font-100 mt-10 txt-banner"
         style="text-shadow: 0 0 10px black"
       >
         <div class="font-200 txt1">{{ txt1 }}</div>
         <div class="font-800 txt2">{{ txt2 }}</div>
       </div>
-    </div>
+    </v-flex>
   </div>
 </template>
 <script>
@@ -33,7 +25,7 @@ export default {
   },
   computed: {
     computedStyle() {
-      let i = this.img ? this.img : '/pattern-hor.jpg'
+      let i = this.img ? this.img : '/quem-somos.jpg'
       let img = `background: url(${i}) center / cover`
 
       let h = this.height ? this.height : 'calc(50vh + 50px)'
@@ -69,6 +61,9 @@ export default {
 </script>
 
 <style lang="scss">
+.banner-principal .txt-banner {
+  font-size: calc(80px + 0.8vw);
+}
 .txt2 {
   animation: estasubindo 0.9s;
 }

@@ -39,21 +39,14 @@
       ref="banner"
     ></Banner>
     <div class="spx-24 pt-6">
-      <h1 class="font-300">Pós-Graduação</h1>
-      <v-layout v-for="(p, i) in pos" :key="i">
-        <v-flex xs12 md4 lg3>
-          <v-img :src="p.img"></v-img>
-          {{ p.name }}
-        </v-flex>
-      </v-layout>
+      <PosCarousel></PosCarousel>
 
       <h1 class="font-300">Graduação Presencial</h1>
       <p>Em breve</p>
       <h1 class="font-300">Graduação Digital</h1>
       <p>Em breve</p>
     </div>
-
-    <h1 class="font-300">Metodologia</h1>
+    <HomeMetodologia></HomeMetodologia>
   </div>
 </template>
 

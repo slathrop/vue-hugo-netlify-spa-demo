@@ -3,7 +3,7 @@
     <Banner
       txt1="APRENDIZAGEM"
       txt2="EVOLUTIVA"
-      img="/home2.jpg"
+      img="/home.jpg"
       height="calc(100vh + 50px)"
     ></Banner>
 
