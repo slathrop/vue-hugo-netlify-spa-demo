@@ -15,20 +15,20 @@
                     </div>
      
                 @endif
-                <sobre
+                <PosShowSobre
                     descricao="pos.descricao"
-                    video="{!! pos.video !!}"
-                ></sobre>
-                <competencias
+                    video="pos.video"
+                ></PosShowSobre>
+                <PosShowCompetencias
                     :itens="pos.competencias"
-                ></competencias>
+                ></PosShowCompetencias>
      
                 <form-saiba-mais :curso="$pos"></form-saiba-mais>
                 @if(pos.matriz->count())
-                <componente-curricular
+                <PosShowComponenteCurricular
                     carga-horaria="pos.carga_horaria"
                     :componentes="pos.matriz"
-                ></componente-curricular>
+                ></PosShowComponenteCurricular>
                 @endif
      
                 @if(pos.fluxogramas->count())
@@ -79,7 +79,7 @@
            
     </template>
 <script>
-export default {}
+	export default {}
 </script>
 <style lang='scss'>
 </style>
