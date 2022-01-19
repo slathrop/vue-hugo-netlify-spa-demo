@@ -222,7 +222,7 @@
 </script>
 
 <style lang="scss">
-	@import '@/../scss/colors';
+	// @import '@/../scss/colors';
 
 	.expansion-panel-ead {
 		box-shadow: none !important;

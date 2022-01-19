@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<div slot="submenu" class="fill-with">
+			<FaculdadeSubmenu></FaculdadeSubmenu>
+		</div>
 		<Banner
 			txt1="PÓS"
 			txt2="GRADUAÇÃO"
