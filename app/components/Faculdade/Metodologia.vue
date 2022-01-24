@@ -1,18 +1,7 @@
 <template>
-  <div class="ead-padding smt-5 spb-10" id="diferenciais">
-    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
-      <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color=" #48397E" />
-        <stop offset="100%" stop-color="#00B3DC" />
-      </linearGradient>
-      <linearGradient id="linear2" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#48397E" />
-        <stop offset="100%" stop-color="#00B3DC" />
-      </linearGradient>
-    </svg>
-
-    <h1 class="titulo ead thin text-xs-center smy-15">
-      <big>DIFERENCIAIS</big>
+  <div class="ead-padding smt-5 spb-10" id="metodologia">
+    <h1 class="titulo ead font-500 text-xs-center smy-15">
+      <big>Metodologia Educacional</big>
     </h1>
     <v-layout wrap class="align-center spx-24 spx-xs-4">
       <v-flex xs12 md4 class="spr-10 spr-xs-0 smb-xs-8">

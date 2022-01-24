@@ -35,7 +35,7 @@
             class="fill-height black--text transparent spx-5 no-radius mx-0"
             depressed
             x-large
-            :class="item.path === pathname ? 'is-selected' : ''"
+            :class="pathname.includes(item.path) ? 'is-selected' : ''"
             :to="item.path"
             v-for="(item, i) in items"
             :key="i"
@@ -305,7 +305,7 @@ export default {
       items: [
         {
           name: 'HOME',
-          path: '/',
+          path: '/home',
         },
         {
           name: 'QUEM SOMOS',
