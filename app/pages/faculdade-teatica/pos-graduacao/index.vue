@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white">
     <div slot="submenu" class="fill-with">
       <FaculdadeSubmenu
         :isup="isup"
@@ -17,8 +17,8 @@
     <div class="spx-24">
       <PosCarousel></PosCarousel>
       <PosFluxograma></PosFluxograma>
-      <FaculdadeMetodologia></FaculdadeMetodologia>
     </div>
+    <FaculdadeMetodologia></FaculdadeMetodologia>
   </div>
 </template>
 

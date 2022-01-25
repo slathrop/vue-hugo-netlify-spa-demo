@@ -4,7 +4,9 @@ let pos = [
         name: 'MBA em Gestão Universitária',
         img: '/faculdade.jpg',
         competencias: [],
-        inicio: "02 de abril de 2022",
+        data_inicio: "02",
+        mes_inicio: "abril",
+        ano_inicio: "22",
         carga_horaria: 360,
         duracao: 9,
         descricao: '',
@@ -63,7 +65,9 @@ let pos = [
         name: 'MBA em Aprendizagem Evolutiva',
         img: '/faculdade.jpg',
         competencias: [],
-        inicio: "09 de abril de 2022",
+        data_inicio: "09",
+        mes_inicio: "abril",
+        ano_inicio: "22",
         carga_horaria: 360,
         duracao: 9,
         descricao: '',
@@ -79,9 +83,9 @@ let pos = [
         name: 'Especialização em Psico-oncologia',
         img: '/faculdade.jpg',
         competencias: [],
-        inicio: "09 de abril de 2022",
+      
         carga_horaria: 360,
-        duracao: 9,
+        
         descricao: '',
         investimento: [
             {

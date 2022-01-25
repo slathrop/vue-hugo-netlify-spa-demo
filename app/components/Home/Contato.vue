@@ -1,13 +1,7 @@
 <template>
   <v-layout
     class="grey lighten-3 relative align-center align-center spb-14"
-    style="
-      margin-top: -50px;
-      z-index: 1;
-      padding-top: 90px;
-      min-height: 100vh;
-      margin-bottom: calc(-133px - 2vw);
-    "
+    style="margin-top: -50px; z-index: 1; padding-top: 90px; min-height: 100vh"
     id="contato"
   >
     <v-flex xs12 md4 lg3 offset-lg1 class="spx-10 titulo c-secondary--text">

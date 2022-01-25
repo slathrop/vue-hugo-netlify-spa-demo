@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1 class="font-500 smt-20">{{ titulo }}</h1>
+    <h1 class="font-500 smt-20 main-title">{{ titulo }}</h1>
+
     <v-layout
       class="flex-wrap align-center"
       style="

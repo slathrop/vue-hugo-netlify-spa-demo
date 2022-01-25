@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white">
     <div slot="submenu" class="fill-with">
       <FaculdadeSubmenu
         :isup="isup"
@@ -16,8 +16,8 @@
     ></Banner>
     <div class="spx-24">
       <CarouselEmBreve titulo="Extensão Digital"></CarouselEmBreve>
-      <FaculdadeMetodologia></FaculdadeMetodologia>
     </div>
+    <FaculdadeMetodologia></FaculdadeMetodologia>
   </div>
 </template>
 

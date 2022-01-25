@@ -79,7 +79,7 @@
       style="
         min-height: calc(100vh - 10px - 80px - 32px);
         z-index: 6;
-        margin-top: 100px;
+        margin-top: calc(-35px - 2vw);
       "
       v-view="changeOnFooter"
     >
@@ -106,10 +106,10 @@
           Foz do Iguaçu / Paraná
         </p>
       </v-flex>
-      <v-flex xs12 md8 lg9 class="black fill-height spt-20">
+      <v-flex xs12 md8 lg9 class="black fill-height">
         <div
           class="c-primary sml-20 px-10 pt-4 pb-3"
-          style="margin-top: calc(-100px - 2vw) !important"
+          style="margin-top: calc(-35px - 2vw) !important"
         >
           <h1 class="mt-0 font-300">Cadastre-se na nossa newsletter</h1>
 
