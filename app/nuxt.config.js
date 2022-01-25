@@ -74,9 +74,8 @@ export default {
   router: {
   extendRoutes(routes, resolve) {
       routes.push({
-        name: 'home',
         path: '/',
-        component: resolve(__dirname, 'pages/home.vue')
+        redirect: '/home'
       })
     }
   },

@@ -8,15 +8,14 @@
       ></FaculdadeSubmenu>
     </div>
     <Banner
-      txt1="PÓS"
-      txt2="GRADUAÇÃO"
-      img="/pos-graduacao.jpg"
+      txt1="EXTENSÃO"
+      txt2="DIGITAL"
+      img="/extensao-digital.jpg"
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>
     <div class="spx-24">
-      <PosCarousel></PosCarousel>
-      <PosFluxograma></PosFluxograma>
+      <CarouselEmBreve titulo="Extensão Digital"></CarouselEmBreve>
       <FaculdadeMetodologia></FaculdadeMetodologia>
     </div>
   </div>
@@ -45,5 +44,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.submenu {
+  .v-btn {
+    font-size: 13px;
+  }
+}
 </style>
+
