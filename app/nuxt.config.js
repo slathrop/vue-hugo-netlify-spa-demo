@@ -71,6 +71,16 @@ export default {
     baseURL: process.env.API
   },
 
+  router: {
+  extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'home',
+        path: '/',
+        component: resolve(__dirname, 'pages/home.vue')
+      })
+    }
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

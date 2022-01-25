@@ -42,7 +42,7 @@ export default {
       passoudobanner: false,
       pathname: '',
       items: [
-        { name: 'Home', path: '/faculdade-teatica' },
+        { name: 'Faculdade Teática', path: '/faculdade-teatica' },
         {
           name: 'Graduação Presencial',
           path: '/faculdade-teatica/graduacao-presencial',
