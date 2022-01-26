@@ -15,7 +15,21 @@
             <!-- <div class="c-primary" style="height: 5px"></div> -->
             <div class="c-primary" style="height: 5px"></div>
 
-            <v-img :src="p.img"> </v-img>
+            <v-img
+              :src="p.img"
+              aspect-ratio="1.5"
+              class="grey lighten-2"
+              lazy-src="/placeholder.jpg"
+            >
+              <template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
             <div
               class="c-primary spx-3 ml-3"
               style="z-index: 2; position: absolute; top: 0"

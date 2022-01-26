@@ -1,63 +1,61 @@
 <template>
-  <div
-    class="spx-24 smt-24 grey lighten-3"
-    style="padding-bottom: calc(45px + 3vw)"
-  >
-    <div class="ead-padding spb-10 spt-15" id="metodologia">
-      <!-- <h1
-        class="font-500 smb-15 titulo-metodologia d-flex relative main-title"
-        style="margin-top: -18px !important; position: absolute"
-      >
-        <span class="c-primary spx-5 black--text">Metodologia Educacional</span>
-      </h1> -->
-      <h1 class="font-500 main-title">Metodologia Educacional</h1>
-
-      <v-layout wrap class="spt-8">
-        <v-flex
-          xs12
-          md6
-          v-for="({ title, desc, icon }, i) in diferenciais"
-          :key="i"
-          class="spr-15 spy-8"
+  <div class="spt-24" id="metodologia">
+    <div class="spx-24 grey lighten-3" style="padding-bottom: calc(45px + 3vw)">
+      <div class="ead-padding spb-10 spt-15">
+        <!-- <h1
+          class="font-500 smb-15 titulo-metodologia d-flex relative main-title"
+          style="margin-top: -18px !important; position: absolute"
         >
-          <v-layout class="align-center hover-effect-1">
-            <!-- <div
-              class="
-                borda-diferenciais-icone
-                mr-5
-                d-flex
-                justify-center
-                align-center
-              "
-            >
-              <i :class="`fas fa-${icon} c-primary--text`"></i>
-            </div> -->
-            <div class="borda-metodologia hover-effect-1-borda mx-0">
-              <h1
+          <span class="c-primary spx-5 black--text">Metodologia Educacional</span>
+        </h1> -->
+        <h1 class="font-500 main-title">Metodologia Educacional</h1>
+        <v-layout wrap class="spt-8">
+          <v-flex
+            xs12
+            md6
+            v-for="({ title, desc, icon }, i) in diferenciais"
+            :key="i"
+            class="spr-15 spy-8"
+          >
+            <v-layout class="align-center hover-effect-1">
+              <!-- <div
                 class="
-                  number
-                  secondary--text
-                  white
+                  borda-diferenciais-icone
+                  mr-5
                   d-flex
-                  align-center
                   justify-center
+                  align-center
                 "
-                style="width: 70px; height: 70px; border-radius: 100px"
               >
-                <i :class="`fas fa-${icon} c-primary-darken-1--text`"></i>
-              </h1>
-            </div>
-            <div class="ml-3">
-              <p class="smb-1 titulo-fluxograma font-600 text-uppercase">
-                <big>{{ title }}</big>
-              </p>
-              <p class="smb-0 c-info-darken-3--text">
-                {{ desc }}
-              </p>
-            </div>
-          </v-layout>
-        </v-flex>
-      </v-layout>
+                <i :class="`fas fa-${icon} c-primary--text`"></i>
+              </div> -->
+              <div class="borda-metodologia hover-effect-1-borda mx-0">
+                <h1
+                  class="
+                    number
+                    secondary--text
+                    white
+                    d-flex
+                    align-center
+                    justify-center
+                  "
+                  style="width: 70px; height: 70px; border-radius: 100px"
+                >
+                  <i :class="`fas fa-${icon} c-primary-darken-1--text`"></i>
+                </h1>
+              </div>
+              <div class="ml-3">
+                <p class="smb-1 titulo-fluxograma font-600 text-uppercase">
+                  <big>{{ title }}</big>
+                </p>
+                <p class="smb-0 c-info-darken-3--text">
+                  {{ desc }}
+                </p>
+              </div>
+            </v-layout>
+          </v-flex>
+        </v-layout>
+      </div>
     </div>
   </div>
 </template>

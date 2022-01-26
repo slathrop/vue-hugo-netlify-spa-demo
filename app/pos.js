@@ -2,7 +2,7 @@ let pos = [
     {
         slug: 'mba-em-gestao-universitaria',
         name: 'MBA em Gestão Universitária',
-        img: '/faculdade.jpg',
+        img: '/mbas/mba-1.jpg',
         competencias: [],
         data_inicio: "02",
         mes_inicio: "abril",
@@ -63,7 +63,7 @@ let pos = [
     {
         slug: 'mba-em-aprendizagem-evolutiva',
         name: 'MBA em Aprendizagem Evolutiva',
-        img: '/faculdade.jpg',
+        img: '/mbas/mba-2.jpg',
         competencias: [],
         data_inicio: "09",
         mes_inicio: "abril",
@@ -81,7 +81,7 @@ let pos = [
     {
         slug: 'especializacao-em-psico-oncologia',
         name: 'Especialização em Psico-oncologia',
-        img: '/faculdade.jpg',
+        img: '/mbas/mba-3.jpg',
         competencias: [],
       
         carga_horaria: 360,

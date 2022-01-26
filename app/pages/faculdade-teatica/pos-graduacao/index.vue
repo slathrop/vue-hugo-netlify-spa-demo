@@ -16,8 +16,8 @@
     ></Banner>
     <div class="spx-24">
       <PosCarousel></PosCarousel>
-      <PosFluxograma></PosFluxograma>
     </div>
+    <PosFluxograma style="margin-bottom: calc(-48px - 2.4vw)"></PosFluxograma>
     <FaculdadeMetodologia></FaculdadeMetodologia>
   </div>
 </template>

@@ -1,52 +1,43 @@
 <template>
   <div
-    class="padding-padrao relative ead-padding spb-10 smt-24"
-    style="border: 1px solid #ffdf42"
+    class="spx-24 grey lighten-3 spy-20 smt-24"
+    style="
+      background: linear-gradient(45deg, #3a3200 30%, black 30%);
+      background-attachment: fixed;
+    "
   >
-    <h1 class="titulo font-400 smb-10" style="margin-top: -1px">
-      <span class="c-primary black--text spx-5"
-        >Como funciona sua Pós-Graduação</span
-      >
-    </h1>
-
-    <v-layout wrap class="justify-space-evenly spx-10">
-      <!--Perdão... Pós de TDAH: Ocultar item Profissionais (4), preceptor (5)-->
-      <v-flex
-        :md3="i <= 3"
-        :md4="i > 3"
-        xs12
-        class="hover-effect-1 spx-4 spy-15 d-flex justify-space-between"
-        v-for="(item, i) in itens"
-        :key="i"
-      >
-        <div class="mr-2">
-          <div class="borda-fluxograma hover-effect-1-borda">
-            <h1
-              class="
-                number
-                grey--text
-                text--darken-2
-                white
-                lighten-3
-                d-flex
-                justify-center
-                my-0
-              "
-            >
-              {{ i + 1 }}.
-            </h1>
+    <div
+      class="relative spb-10 spt-6 spx-10 white"
+      style="border: 1px solid #dfdfdf"
+    >
+      <h1 class="font-500 main-title">Como funciona sua Pós-Graduação</h1>
+      <v-layout wrap class="justify-space-evenly ml-3">
+        <v-flex
+          :md3="i <= 3"
+          :md4="i > 3"
+          xs12
+          class="hover-effect-1 spr-2 spt-10 spb-5 d-flex justify-space-between"
+          v-for="(item, i) in itens"
+          :key="i"
+        >
+          <span
+            class="flecha c-primary d-flex align-center justify-center titulo"
+          >
+            <b>{{ i + 1 }}</b>
+          </span>
+          <div class="spr-10 ml-4">
+            <p class="smb-0 smt-0 font-600 sml-0">
+              <big>
+                {{ item.title }}
+              </big>
+            </p>
+            <p class="grey--text mb-0">
+              {{ item.description }}
+            </p>
           </div>
-        </div>
-        <div class="ml-3">
-          <p class="smb-1 smt-0 titulo-fluxograma font-600">
-            <big>{{ item.title }}</big>
-          </p>
-          <p class="descricao-fluxograma mb-0">
-            {{ item.description }}
-          </p>
-        </div>
-      </v-flex>
-    </v-layout>
+        </v-flex>
+      </v-layout>
+    </div>
   </div>
 </template>
 
@@ -119,15 +110,6 @@ export default {
 <style lang="scss">
 @import '@/../scss/_color_set';
 
-.titulo-fluxograma {
-  line-height: 1.5;
-  color: $c-secondary;
-  font-size: calc(10px + 0.25vw);
-  @media (max-width: 420px) {
-    font-size: calc(16px + 0.25vw);
-  }
-}
-
 .hover-effect-1-icon {
   transition: transform 0.3s linear;
 }
@@ -152,26 +134,32 @@ export default {
   }
 }
 
-.descricao-fluxograma {
-  line-height: 1.3;
-  font-size: calc(10px + 0.25vw);
-  @media (max-width: 420px) {
-    font-size: calc(15px + 0.25vw);
+.flecha {
+  height: 60px;
+  min-width: 30px;
+  max-width: 30px;
+  position: relative;
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 30px solid #ffde17;
+    border-bottom: 30px solid #ffde17;
+    border-left: 10px solid transparent;
+    position: absolute;
+    left: -10px;
+  }
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 10px solid #ffde17;
+    position: absolute;
+    right: -10px;
   }
 }
-
-.borda-fluxograma {
-  // border-top: 3px solid #d9ba00;
-  // border-bottom: 3px solid #d9ba00;
-  // border-left: 1px solid #c5c5c5;
-  // border-right: 1px solid #c5c5c5;
-  // border-radius: 100%;
-  // margin: auto;
-  // width: 70px;
-  // min-width: 70px;
-  // height: 70px;
-}
-
 .icone-fluxograma {
   fill: url(#linear2);
   stroke: white;
