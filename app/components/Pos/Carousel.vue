@@ -10,7 +10,10 @@
       "
     >
       <v-flex xs12 md4 lg3 class="spx-4" v-for="(p, i) in pos" :key="i">
-        <a :href="`/pos-graduacao/${p.slug}`" class="no-underline">
+        <a
+          :href="`/faculdade-teatica/pos-graduacao/${p.slug}`"
+          class="no-underline"
+        >
           <v-card>
             <!-- <div class="c-primary" style="height: 5px"></div> -->
             <div class="c-primary" style="height: 5px"></div>
@@ -19,13 +22,13 @@
               :src="p.img"
               aspect-ratio="1.5"
               class="grey lighten-2"
-              lazy-src="/placeholder.jpg"
+              lazy-src="/placeholder-2.jpg"
             >
               <template v-slot:placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
                   <v-progress-circular
                     indeterminate
-                    color="grey lighten-5"
+                    color="grey lighten-2"
                   ></v-progress-circular>
                 </v-row>
               </template>
@@ -56,7 +59,7 @@
                 }}</big>
                 <big class="font-900" v-else>a definir</big>
                 <big class="font-900" v-if="p.ano_inicio"
-                  >/{{ p.ano_inicio }}</big
+                  >/{{ p.ano_inicio.slice(2, 4) }}</big
                 >
               </p>
             </div>

@@ -6,13 +6,14 @@ let pos = [
         competencias: [],
         data_inicio: "02",
         mes_inicio: "abril",
-        ano_inicio: "22",
+        ano_inicio: "2022",
         carga_horaria: 360,
         duracao: 9,
-        descricao: '',
+        descricao: '<p>Mollit duis irure mollit pariatur Lorem velit quis ea elit amet adipisicing. Non eiusmod ullamco reprehenderit incididunt anim officia aute laborum eu est non. Anim laborum cupidatat id duis ex proident.</p> <p>Pariatur duis officia commodo commodo pariatur nulla nulla sint sint aliquip velit incididunt labore. Sit veniam eu eu nostrud proident commodo quis reprehenderit aliquip quis aute amet. Ea officia incididunt cillum dolore incididunt minim enim occaecat sunt in velit ea. Duis fugiat dolore ea pariatur aliqua consequat fugiat id anim dolor aute. Ut cupidatat aliqua amet ullamco proident labore nostrud commodo eiusmod in. Minim nisi elit qui qui deserunt minim tempor cillum proident magna tempor.</p>',
         investimento: [
             {
                 valor: 280,
+                centavos: 0,
                 label: '12 parcelas de'
             }
         ],
@@ -67,13 +68,14 @@ let pos = [
         competencias: [],
         data_inicio: "09",
         mes_inicio: "abril",
-        ano_inicio: "22",
+        ano_inicio: "2022",
         carga_horaria: 360,
         duracao: 9,
-        descricao: '',
+        descricao: '<p>Commodo velit deserunt Lorem incididunt irure incididunt et nulla amet. Ex deserunt Lorem laborum enim nisi excepteur cupidatat excepteur commodo. Dolor elit ex laboris quis. Id ea mollit elit eiusmod occaecat exercitation laborum officia cupidatat reprehenderit adipisicing. Sint ipsum aute magna deserunt sint consectetur qui id reprehenderit ut. Ex eiusmod proident minim velit id irure.</p>',
         investimento: [
             {
                 valor: 280,
+                centavos: 0,
                 label: '12 parcelas de'
             }
         ]
@@ -86,10 +88,11 @@ let pos = [
       
         carga_horaria: 360,
         
-        descricao: '',
+        descricao: '<p>Occaecat nulla commodo aute dolore enim ipsum enim aute fugiat cupidatat nulla est occaecat dolore. Sint do irure veniam Lorem aliquip cillum ut magna. In nisi minim enim irure et duis dolor qui eiusmod. Consectetur magna sunt nostrud velit. Laboris occaecat Lorem et aliqua dolore.</p>',
         investimento: [
             {
                 valor: 280,
+                centavos: 0,
                 label: '12 parcelas de'
             }
         ]

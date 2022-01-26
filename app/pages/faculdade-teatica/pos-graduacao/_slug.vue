@@ -1,29 +1,30 @@
 <template>
   <div class="white">
-    <PosShowTopo
-      :titulo="curso.name"
-      :duracao="curso.duracao"
-      :inscricao="curso.inscricao_aberta ? curso.inscricao : ''"
-      :curso-name="curso.name"
-      :id="curso.id"
-      :inscricaoaberta="true"
-    ></PosShowTopo>
+    <div slot="submenu" class="fill-with">
+      <FaculdadeSubmenu
+        :isup="isup"
+        :onFooter="onFooter"
+        :banner="banner"
+      ></FaculdadeSubmenu>
+    </div>
+    <PosShowTopo :curso="curso" ref="banner"></PosShowTopo>
+    <div class="white relative spx-xl-24" style="z-index: 1">
+      <PosShowSobre :curso="curso"></PosShowSobre>
+    </div>
+    <div class="white relative" style="z-index: 1">
+      <PosShowFormSaibaMais :curso="curso"></PosShowFormSaibaMais>
+      <PosShowComponenteCurricular
+        v-if="curso.matriz && curso.matriz.length"
+        carga-horaria="curso.carga_horaria"
+        :componentes="curso.matriz"
+      ></PosShowComponenteCurricular>
+      <PosFluxograma
+        style="margin-bottom: calc(-48px - 2.4vw); z-index: 3"
+      ></PosFluxograma>
 
-    <PosShowSobre
-      descricao="curso.descricao"
-      video="curso.video"
-    ></PosShowSobre>
-    <PosShowCompetencias
-      v-if="curso.competencias"
-      :itens="curso.competencias"
-    ></PosShowCompetencias>
-
-    <form-saiba-mais :curso="curso"></form-saiba-mais>
-    <PosShowComponenteCurricular
-      v-if="curso.matriz && curso.matriz.length"
-      carga-horaria="curso.carga_horaria"
-      :componentes="curso.matriz"
-    ></PosShowComponenteCurricular>
+      <FaculdadeMetodologia></FaculdadeMetodologia>
+    </div>
+    <!-- 
     <fluxograma-portal
       v-if="curso.matriz && curso.fluxogramas.length"
       titulo="COMO FUNCIONA SUA PÓS-GRADUAÇÃO"
@@ -64,7 +65,7 @@
         :inscricaoaberta="curso.inscricao_aberta"
         href="curso.inscricao_aberta ? curso.inscricao : ''"
       ></botao-inscricao>
-    </v-layout>
+    </v-layout> -->
   </div>
 </template>
 <script>
@@ -74,6 +75,7 @@ export default {
   data() {
     return {
       curso: {},
+      banner: {},
     }
   },
   beforeRouteEnter(to, from, next) {
@@ -92,10 +94,21 @@ export default {
         : open('/404', '_self')
     },
   },
+  computed: {
+    isup() {
+      return this.$attrs.isup
+    },
+    onFooter() {
+      return this.$attrs.onFooter
+    },
+  },
   mounted() {
-    let path = location.pathname.split('/')[2]
-    console.log(path)
-    // this.setPos(location.pathname.split['/'][2])
+    let path = location.pathname.split('/')[3]
+
+    setTimeout(() => {
+      this.banner = this.$refs.banner
+      this.setPos(path)
+    }, 500)
   },
 }
 </script>
