@@ -9,7 +9,7 @@
           <span class="c-primary spx-5 black--text">Metodologia Educacional</span>
         </h1> -->
         <h1 class="font-500 main-title">Metodologia Educacional</h1>
-        <v-layout wrap class="spt-8">
+        <v-layout wrap class="spt-2">
           <v-flex
             xs12
             md6

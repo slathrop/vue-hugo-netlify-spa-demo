@@ -1,6 +1,6 @@
 <template>
   <div
-    class="spx-24 grey lighten-3 spy-20 smt-24"
+    class="spx-14 grey lighten-3 spy-20 smt-24"
     style="
       background: linear-gradient(45deg, #3a3200 30%, black 30%);
       background-attachment: fixed;

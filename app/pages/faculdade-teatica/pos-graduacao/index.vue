@@ -10,7 +10,7 @@
     <Banner
       txt1="PÓS"
       txt2="GRADUAÇÃO"
-      img="/pos-graduacao.jpg"
+      img="/graduacao-digital.jpg"
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>

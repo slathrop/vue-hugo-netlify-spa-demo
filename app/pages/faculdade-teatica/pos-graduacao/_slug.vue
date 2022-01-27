@@ -13,11 +13,13 @@
     </div>
     <div class="white relative" style="z-index: 1">
       <PosShowFormSaibaMais :curso="curso"></PosShowFormSaibaMais>
-      <PosShowComponenteCurricular
-        v-if="curso.matriz && curso.matriz.length"
-        carga-horaria="curso.carga_horaria"
-        :componentes="curso.matriz"
-      ></PosShowComponenteCurricular>
+      <div class="spx-24">
+        <PosShowComponenteCurricular
+          v-if="curso.matriz && curso.matriz.length"
+          :curso="curso"
+        ></PosShowComponenteCurricular>
+        <PosCarousel></PosCarousel>
+      </div>
       <PosFluxograma
         style="margin-bottom: calc(-48px - 2.4vw); z-index: 3"
       ></PosFluxograma>
