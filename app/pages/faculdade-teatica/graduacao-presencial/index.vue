@@ -15,7 +15,7 @@
       ref="banner"
     ></Banner>
     <div class="spx-24">
-      <CarouselEmBreve titulo="Graduação Presencial"></CarouselEmBreve>
+      <FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
     </div>
     <FaculdadeMetodologia></FaculdadeMetodologia>
   </div>
