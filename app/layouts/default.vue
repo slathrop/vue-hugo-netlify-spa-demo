@@ -8,7 +8,7 @@
       :class="isup ? 'transparent elevation-0' : 'black elevation-2'"
     >
       <v-flex xs12 md4 lg3 class="fill-height">
-        <a href="/">
+        <router-link to="/">
           <v-img
             @load="contentLoaded"
             contain
@@ -16,7 +16,7 @@
             style="width: 170px"
             :src="`/teatica-logo${isup ? '-n' : '-n'}.png`"
           ></v-img>
-        </a>
+        </router-link>
         <v-spacer></v-spacer>
       </v-flex>
       <v-flex xs12 md8 lg9 class="fill-height">
@@ -124,7 +124,7 @@
 
         <v-layout class="white--text">
           <v-flex class="spl-24">
-            <a class="white--text no-underline" href="/quem-somos">
+            <a class="white--text no-underline" to="/quem-somos">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -133,7 +133,7 @@
               >
               <p>Quem Somos</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -142,7 +142,7 @@
               >
               <p>Aconteceu na Teática</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -151,7 +151,7 @@
               >
               <p>Blog Teática</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -162,7 +162,7 @@
             </a>
           </v-flex>
           <v-flex>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -171,7 +171,7 @@
               >
               <p>Faculdade Teática</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -180,7 +180,7 @@
               >
               <p>Graduação Presencial</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -189,7 +189,7 @@
               >
               <p>Graduação Digital</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -198,7 +198,7 @@
               >
               <p>Pós-Graduação Digital</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -207,7 +207,7 @@
               >
               <p>Curso de Extensão Digital</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -218,7 +218,7 @@
             </a>
           </v-flex>
           <v-flex>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -227,7 +227,7 @@
               >
               <p>Colégio Teática</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -236,7 +236,7 @@
               >
               <p>Portal de Cursos Digitais</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -245,7 +245,7 @@
               >
               <p>Escola de Saúde</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -254,7 +254,7 @@
               >
               <p>Centro Integrado de Saúde</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -263,7 +263,7 @@
               >
               <p>Hospital Veterinário</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -272,7 +272,7 @@
               >
               <p>Hub de Inovação</p>
             </a>
-            <a class="white--text no-underline" href="">
+            <a class="white--text no-underline" to="">
               <v-icon
                 class="mr-2 pt-1 c-primary--text"
                 small
@@ -308,12 +308,20 @@ export default {
           path: '/home',
         },
         {
+          name: 'FACULDADE TEÁTICA',
+          path: '/faculdade-teatica',
+        },
+        {
           name: 'QUEM SOMOS',
           path: '/quem-somos',
         },
         {
-          name: 'FACULDADE TEÁTICA',
-          path: '/faculdade-teatica',
+          name: 'ACONTECE NA TEÁTICA',
+          path: '/acontece-na-teatica',
+        },
+        {
+          name: 'BLOG TEÁTICA',
+          path: '/blog-teatica',
         },
         {
           name: 'CONTATO',

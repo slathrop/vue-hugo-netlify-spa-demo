@@ -12,7 +12,7 @@ let pos = [
         descricao: '<p>Mollit duis irure mollit pariatur Lorem velit quis ea elit amet adipisicing. Non eiusmod ullamco reprehenderit incididunt anim officia aute laborum eu est non. Anim laborum cupidatat id duis ex proident.</p> <p>Pariatur duis officia commodo commodo pariatur nulla nulla sint sint aliquip velit incididunt labore. Sit veniam eu eu nostrud proident commodo quis reprehenderit aliquip quis aute amet. Ea officia incididunt cillum dolore incididunt minim enim occaecat sunt in velit ea. Duis fugiat dolore ea pariatur aliqua consequat fugiat id anim dolor aute. Ut cupidatat aliqua amet ullamco proident labore nostrud commodo eiusmod in. Minim nisi elit qui qui deserunt minim tempor cillum proident magna tempor.</p>',
         investimento: [
             {
-                valor: 280,
+                valor: 370,
                 centavos: 0,
                 label: '12 parcelas de'
             }

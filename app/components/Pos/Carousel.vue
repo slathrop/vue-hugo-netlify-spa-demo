@@ -10,14 +10,11 @@
       "
     >
       <v-flex xs12 md4 lg3 class="spx-4" v-for="(p, i) in pos" :key="i">
-        <a
-          :href="`/faculdade-teatica/pos-graduacao/${p.slug}`"
+        <router-link
+          :to="`/faculdade-teatica/pos-graduacao/${p.slug}`"
           class="no-underline"
         >
           <v-card>
-            <!-- <div class="c-primary" style="height: 5px"></div> -->
-            <div class="c-primary" style="height: 5px"></div>
-
             <v-img
               :src="p.img"
               aspect-ratio="1.5"
@@ -80,8 +77,9 @@
                 ></v-btn>
               </v-layout>
             </div>
+            <div class="c-primary" style="height: 5px"></div>
           </v-card>
-        </a>
+        </router-link>
       </v-flex>
     </v-layout>
   </div>

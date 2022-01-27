@@ -8,7 +8,7 @@
       ></FaculdadeSubmenu>
     </div>
     <Banner
-      txt1="GRADUACAO"
+      txt1="GRADUAÇÃO"
       txt2="DIGITAL"
       img="/pos-graduacao.jpg"
       height="calc(60vh + 50px)"
