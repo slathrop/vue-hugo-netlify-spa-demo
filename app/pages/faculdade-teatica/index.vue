@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white">
     <div slot="submenu" class="fill-with">
       <FaculdadeSubmenu
         :isup="isup"
@@ -16,10 +16,32 @@
     ></Banner>
     <div class="spx-24">
       <PosCarousel></PosCarousel>
-      <CarouselEmBreve titulo="Graduação Presencial"></CarouselEmBreve>
+      <FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
       <CarouselEmBreve titulo="Graduação Digital"></CarouselEmBreve>
-      <FaculdadeMetodologia></FaculdadeMetodologia>
     </div>
+
+    <v-layout class="spx-24">
+      <v-flex xs12 md6 class="spr-10">
+        <h1 class="font-500 smt-20 main-title">Acontece na Teática</h1>
+
+        <v-layout style="margin: 0 calc(-8px - 0.4vw) !important">
+          <v-flex xs12 md6 class="spx-4" v-for="i in 2" :key="i">
+            <BlogCard></BlogCard>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+      <v-flex xs12 md6 class="spl-10">
+        <h1 class="font-500 smt-20 main-title">Blog Teática</h1>
+
+        <v-layout style="margin: 0 calc(-8px - 0.4vw) !important">
+          <v-flex xs12 md6 class="spx-4" v-for="i in 2" :key="i">
+            <BlogCard></BlogCard>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+
+    <FaculdadeMetodologia></FaculdadeMetodologia>
   </div>
 </template>
 

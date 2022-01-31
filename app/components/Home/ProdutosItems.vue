@@ -17,7 +17,7 @@
       :data-aos-delay="i * 50"
       class="smy-10"
     >
-      <a :href="url" class="no-underline black--text produtos-items">
+      <router-link :to="url" class="no-underline black--text produtos-items">
         <v-img
           style="max-width: 100px"
           class="mx-auto produtos-items-img"
@@ -27,7 +27,7 @@
         <h1 class="subtitulo2 font-900 text-center text-uppercase">
           {{ nome }}
         </h1>
-      </a>
+      </router-link>
     </v-flex>
   </v-layout>
 </template>

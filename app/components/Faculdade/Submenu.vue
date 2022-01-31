@@ -42,7 +42,7 @@ export default {
       passoudobanner: false,
       pathname: '',
       items: [
-        { name: 'Home', path: '/faculdade-teatica' },
+        { name: 'Faculdade Teática', path: '/faculdade-teatica' },
         {
           name: 'Graduação Presencial',
           path: '/faculdade-teatica/graduacao-presencial',
@@ -67,12 +67,12 @@ export default {
   mounted() {
     this.pathname = location.pathname
     this.$nextTick(() => {
-      let item = this.items.find((i) => i.name === 'Metodologia')
-      let path =
-        location.pathname === '/faculdade-teatica'
-          ? '#metodologia'
-          : '/faculdade-teatica#metodologia'
-      item.path = path
+      // let item = this.items.find((i) => i.name === 'Metodologia')
+      // let path =
+      //   location.pathname === '/faculdade-teatica'
+      //     ? '#metodologia'
+      //     : '/faculdade-teatica#metodologia'
+      // item.path = path
       setTimeout(() => {
         let bh = this.banner.$el.offsetHeight - 76
         this.passoudobanner = bh < scrollY

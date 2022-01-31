@@ -15,6 +15,9 @@ $scroll-color: #a5a5a5;
     // ...
 );
 
+.theme--light.v-application {
+    background: #212121 !important;
+}
 .layout-enter-active,
 	.layout-leave-active {
 		transition: opacity .3s;
@@ -26,7 +29,9 @@ $scroll-color: #a5a5a5;
 .flex-0{
     flex: 0 !important;
 }
-
+.line-height-1{
+    line-height: 1;
+}
 .fill-width{
     width: 100%;
 }
@@ -54,7 +59,10 @@ $scroll-color: #a5a5a5;
         font-family: "Source Sans 3", sans-serif !important;
     }
     
-    
+.main-title{
+        border-left: 2px solid #ffde17;
+    padding-left: 10px;
+}
 .titulo-banner {
     font-size: calc(60px + 0.6vw);
     line-height: 1.2;

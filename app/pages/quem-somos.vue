@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white">
     <Banner txt1="QUEM" txt2="SOMOS"></Banner>
     <div class="spa-24">
       <p class="spx-24 text-center">
@@ -20,10 +20,7 @@
       <HomeProdutosItems></HomeProdutosItems>
     </div>
 
-    <v-layout
-      class="spy-24 grey lighten-3"
-      style="margin-bottom: calc(-133px - 2vw)"
-    >
+    <v-layout class="spy-24 grey lighten-3">
       <v-flex xs12 md4 lg3 class="spl-24">
         <p>
           A Associação Teática Internacional é composta por um
