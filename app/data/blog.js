@@ -12,7 +12,7 @@ let blog = [
                 id:1,
                 nome: 'Ryon Braga',
                 imagem: '/staff/ryon.jpg',
-                minibio: 'Laborum commodo et eiusmod laborum commodo occaecat dolor nulla reprehenderit velit.'
+                minibio: 'Laborum commodo et eiusmod'
             }
         ],
         categoria: [
@@ -42,14 +42,14 @@ let blog = [
                 id:1,
                 nome: 'Ryon Braga',
                 imagem: '/staff/ryon.jpg',
-                minibio: 'Laborum commodo et eiusmod laborum commodo occaecat dolor nulla reprehenderit velit.'
+                minibio: 'Laborum commodo et eiusmod'
             }
         ],
         categoria: [
             {
                 id: 1,
                 nome: 'Pós-Graduação',
-                slug: 'educacao'
+                slug: 'pos-graduacao'
                 
             },
             
@@ -68,7 +68,7 @@ let blog = [
                 id:1,
                 nome: 'Ryon Braga',
                 imagem: '/staff/ryon.jpg',
-                minibio: 'Laborum commodo et eiusmod laborum commodo occaecat dolor nulla reprehenderit velit.'
+                minibio: 'Laborum commodo et eiusmod'
             }
         ],
         categoria: [
@@ -98,7 +98,7 @@ let blog = [
                 id:1,
                 nome: 'Ryon Braga',
                 imagem: '/staff/ryon.jpg',
-                minibio: 'Laborum commodo et eiusmod laborum commodo occaecat dolor nulla reprehenderit velit.'
+                minibio: 'Laborum commodo et eiusmod'
             }
         ],
         categoria: [

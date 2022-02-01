@@ -17,6 +17,7 @@
     "nuxt": "^2.15.7",
     "vue": "^2.6.14",
     "vue-check-view": "^0.3.0",
+    "vue-truncate-filter": "^1.1.7",
     "vuetify": "^2.5.5"
   },
   "devDependencies": {
