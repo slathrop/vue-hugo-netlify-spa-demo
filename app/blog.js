@@ -1,61 +1,32 @@
 let pos = [
     {
-        slug: 'mba-em-gestao-universitaria',
-        name: 'MBA em Gestão Universitária',
-        img: '/faculdade.jpg',
-        competencias: [],
-        inicio: "02 de abril de 2022",
-        carga_horaria: 360,
-        duracao: 9,
-        descricao: '',
-        investimento: [
+        id: 1,
+        slug: 'elit-elit-anim-eiusmod-ea',
+        titulo: 'Elit elit anim eiusmod ea',
+        subtitulo: 'Consequat magna irure enim nisi cillum ullamco duis irure adipisicing ex ea sunt laboris',
+        imagem: '/faculdade.jpg',
+        texto: '<p>Officia anim exercitation elit minim nulla magna dolore incididunt voluptate ullamco esse occaecat ad. Ex laborum consectetur duis elit minim ullamco sunt minim adipisicing minim. Labore dolore aliquip aute ut voluptate eu anim excepteur culpa officia. Do est quis id culpa aute velit dolor. Mollit ea aliqua aute labore est officia culpa laborum et elit aliquip fugiat.</p><p>Labore fugiat duis eiusmod est ipsum officia incididunt nostrud aliquip non id laborum deserunt sunt. Culpa labore nostrud culpa quis anim qui minim in. Ad laboris esse ad eu pariatur. Anim est enim deserunt eu Lorem reprehenderit culpa sit sit laboris irure sint nostrud ipsum. Aliquip veniam nisi dolore quis est in ipsum irure esse sunt occaecat minim non sunt.</p>',
+        published_at: "02 de abril de 2022",
+        autores: [
             {
-                valor: 280,
-                label: '12 parcelas de'
+                id:1,
+                nome: 'Ryon Braga',
+                imagem: '/staff/ryon.jpg',
+                minibio: 'Laborum commodo et eiusmod laborum commodo occaecat dolor nulla reprehenderit velit.'
             }
         ],
-        matriz: [
+        categoria: [
             {
-                titulo: 'Visão Sistêmica da Gestão Universitária',
-                itens:[
-                    "Conhecimento sistêmico do negócio educação",
-                    "Integração entre a visão de, gestor e a visão de educador",
-                    "Modelo analítico de gestão"
-                ]
+                id: 1,
+                nome: 'Educação',
+                slug: 'educacao'
+                
             },
             {
-                titulo: 'Mercado e Competitividade',
-                itens:[
-                    "Participação no mercado (market share e sales share)",
-                    "Análise da Concorrência",
-                    "Estratégia e Posicionamento"
-                ]
-            },
-            {
-                titulo: 'Marketing e vendas',
-                itens:[
-                    "Estratégias de captação",
-                    "Elasticidade de preços",
-                    "Marketing digital aplicado a instituições de ensino"
-                ]
-            },
-            {
-                titulo: 'Gestão Acadêmica e do Processo Regulatória',
-                itens:[
-                    "Integração horizontal e vertical de currículos",
-                    "DCN’s, mercado e PPCs.",
-                    "Gestão do processo regulatório"
-                ]
-            },
-            {
-                titulo: 'Gestão do Projeto Pedagógico',
-                itens:[
-                    "Definição do modelo educacional a ser adotado",
-                    "Modelos educacionais inovadores",
-                    "Elaboração de matrizes curriculares inovadoras"
-                ]
-            },
-
+                id:2,
+                nome: 'Empregabilidade',
+                slug: 'empregabilidade'
+            }
         ]
     },
 
