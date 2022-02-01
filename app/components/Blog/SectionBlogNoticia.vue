@@ -1,5 +1,5 @@
 <template>
-	<v-layout class="spx-24 white spb-20 spt-10">
+	<v-layout class="spx-24 white spt-10">
 		<v-flex xs12 md6 class="spr-10">
 			<h1 class="font-500 smt-20 main-title">Acontece na Teática</h1>
 

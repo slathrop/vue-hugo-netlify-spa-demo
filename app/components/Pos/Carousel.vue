@@ -3,7 +3,7 @@
 		<h1 class="font-500 smt-20 main-title">Pós-Graduação</h1>
 
 		<v-layout
-			class="flex-wrap align-center"
+			class="flex-wrap"
 			style="
 				margin-left: calc(-8px - 0.4vw) !important;
 				margin-right: calc(-8px - 0.4vw) !important;
@@ -12,9 +12,11 @@
 			<v-flex xs12 md4 lg3 class="spx-4" v-for="(p, i) in pos" :key="i">
 				<router-link
 					:to="`/faculdade-teatica/pos-graduacao/${p.slug}`"
-					class="no-underline"
+					class="no-underline fill-height"
 				>
-					<v-card>
+					<v-card class="fill-height">
+						<div class="c-primary" style="height: 5px"></div>
+
 						<v-img
 							:src="p.img"
 							aspect-ratio="1.5"
@@ -60,24 +62,26 @@
 								>
 							</p>
 						</div>
-						<div class="spl-3 spy-5">
+						<v-card-text class="spl-3 spy-5">
 							<!-- <div class="c-primary" style="height: 5px"></div> -->
-							<h2 class="pt-1 c-secondary--text">
+							<h2 class="pt-1 c-secondary--text line-height-1-2 font-600">
 								{{ p.name }}
 							</h2>
 							<div class="spt-2" v-if="p.duracao">
 								<i class="fas fa-clock mr-2 c-info-darken-1--text"></i>Duração:
 								{{ p.duracao }} meses
 							</div>
-							<div v-else>a definir</div>
+							<div v-else>
+								<i class="fas fa-clock mr-2 c-info-darken-1--text"></i>Duração:
+								a definir
+							</div>
 							<v-layout class="justify-end">
 								<v-btn depressed small class="smr-3 smt-3 c-primary black--text"
 									><span class="font-600">SAIBA MAIS</span
 									><i class="fas fa-arrow-right ml-2"></i
 								></v-btn>
 							</v-layout>
-						</div>
-						<div class="c-primary" style="height: 5px"></div>
+						</v-card-text>
 					</v-card>
 				</router-link>
 			</v-flex>

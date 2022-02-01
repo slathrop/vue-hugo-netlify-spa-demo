@@ -15,8 +15,12 @@
 		>
 		</v-img>
 		<v-card-text class="black--text">
-			<p class="mb-2">{{ blog.published_at }}</p>
-			<h3 class="mb-2" :inner-html.prop="blog.titulo | truncate(60)"></h3>
+			<p class="mb-2">
+				{{ DateTime.fromISO(blog.published_at).toFormat('dd.MM.y') }}
+			</p>
+			<h2 class="mb-2 font-600">
+				<small :inner-html.prop="blog.titulo | truncate(60)"></small>
+			</h2>
 			<p
 				class="line-height-1-2"
 				:inner-html.prop="blog.texto | truncate(100)"
@@ -55,8 +59,26 @@
 	</v-card>
 </template>
 <script>
+	const { DateTime } = require('luxon')
 	export default {
 		props: ['blog'],
+		data() {
+			return {
+				DateTime,
+			}
+		},
+
+		computed: {
+			parsedDate() {
+				// console.log('lol')
+				// if (luxon) {
+				// return luxon.DateTime.fromISO(this.blog.published_at)
+				// }
+			},
+		},
+		mounted() {
+			console.log(DateTime)
+		},
 	}
 </script>
 <style lang='scss'>

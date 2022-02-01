@@ -18,6 +18,7 @@
 			<PosCarousel></PosCarousel>
 			<FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
 			<CarouselEmBreve titulo="Graduação Digital"></CarouselEmBreve>
+			<CarouselEmBreve titulo="Extensão Digital"></CarouselEmBreve>
 		</div>
 
 		<BlogSectionBlogNoticia></BlogSectionBlogNoticia>

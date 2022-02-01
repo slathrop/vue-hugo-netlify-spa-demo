@@ -8,7 +8,7 @@
 		></Banner>
 
 		<HomeProdutos></HomeProdutos>
-		<BlogSectionBlogNoticia></BlogSectionBlogNoticia>
+		<BlogSectionBlogNoticia class="spb-20"></BlogSectionBlogNoticia>
 
 		<HomeContato></HomeContato>
 	</div>
