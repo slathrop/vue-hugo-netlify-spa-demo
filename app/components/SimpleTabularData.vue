@@ -69,14 +69,13 @@ export default {
       try {
         console.log('Getting rows...');
         
-        function reqListener () {
-          console.log(this.responseText);
-        }
-
-        var oReq = new XMLHttpRequest();
-        oReq.addEventListener("load", reqListener);
-        oReq.open("GET", this.dataUrl);
-        oReq.send();
+        //function reqListener () {
+        //  console.log(this.responseText);
+        //}
+        //var oReq = new XMLHttpRequest();
+        //oReq.addEventListener('load', reqListener);
+        //oReq.open('GET', this.dataUrl);
+        //oReq.send();
         
         const response = await this.$axios.$get(this.dataUrl);
         console.log(`Got rows from ${this.dataUrl}`);
