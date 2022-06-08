@@ -71,6 +71,15 @@ module.exports = {
     // https: true
     debug: true,
     proxyHeaders: false,
+    headers: {
+      common: {},
+      delete: {},
+      get: {},
+      head: {},
+      post: {},
+      put: {},
+      patch: {}
+    }
   },
 
   /*
