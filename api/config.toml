@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Hugo REST API Demo"
-disableKinds = ["RSS", "sitemap"]
+disableKinds = ["RSS", "sitemap", "taxonomy", "taxonomyTerm", "home", "section"]
 
 [outputFormats.JSON]
 baseName = "get"
