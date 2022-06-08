@@ -77,7 +77,12 @@ export default {
         //oReq.open('GET', this.dataUrl);
         //oReq.send();
         
-        const response = await this.$axios.$get(this.dataUrl);
+        const response = await this.$axios.$get(this.dataUrl, {
+          transformRequest: (data, headers) => {
+            delete headers.common;
+            return data;
+          }
+        });
         console.log(`Got rows from ${this.dataUrl}`);
         this.rows = response.data[this.entityResultDataKey];
       } catch (e) {
