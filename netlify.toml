@@ -15,4 +15,4 @@
 
 [build.environment]
 NODE_VERSION = '8.9.1'
-HUGO_VERSION = '0.40.3'
+HUGO_VERSION = '0.51'
