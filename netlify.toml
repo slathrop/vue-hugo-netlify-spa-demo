@@ -22,5 +22,5 @@ HUGO_VERSION = '0.67.0'
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Headers = "authtoken, content-type, application/json, text/plain, */*"
+    Access-Control-Allow-Headers = "X-Requested-With, Content-Type, Authorization, Origin, Accept, authtoken, application/json, text/plain, */*"
     Access-Control-Allow-Methods = "GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH"
