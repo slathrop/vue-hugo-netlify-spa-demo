@@ -28,7 +28,8 @@ export default {
     API_HOST: 'https://bobble-api.netlify.com',
     // API_HOST: 'http://localhost:1313',
     // API_GET_SUFFIX: '/get.json',
-    API_GET_SUFFIX: '/',
+    // API_GET_SUFFIX: '/',
+    API_GET_SUFFIX: '/get.json/',
 
     loading: true,
     pagination: {
