@@ -25,7 +25,8 @@ export default {
   },
 
   data: () => ({
-    API_HOST: 'https://bobble-app.netlify.com/api',
+    API_HOST: '/api',
+    // API_HOST: 'https://bobble-app.netlify.com/api',
     // API_HOST: 'https://bobble-api.netlify.com',
     // API_HOST: 'http://localhost:1313',
     // API_GET_SUFFIX: '/get.json',
