@@ -80,6 +80,7 @@ export default {
         const response = await this.$axios.$get(this.dataUrl, {
           transformRequest: (data, headers) => {
             delete headers.common;
+            delete headers['Authorization'];
             return data;
           }
         });
